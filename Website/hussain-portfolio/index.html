@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Hussain — Database & Software Developer</title>
+  <meta name="description" content="Portfolio of Muhammad Hussain — Database & Software Developer, Founder of Zorvexa, Software Engineering student at COMSATS University Islamabad.">
+  <meta name="theme-color" content="#00d9ff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">MH</span>
+        <span class="nav__logo-text">Hussain</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta">Get in Touch</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="heroCanvas"></canvas>
+    <div class="hero__gradient"></div>
+    <div class="hero__content">
+      <div class="hero__top">
+        <div class="hero__text">
+          <div class="hero__badge" id="heroBadge">
+            <span class="hero__badge-dot"></span>
+            <span>Available for opportunities</span>
+          </div>
+          <h1 class="hero__name" id="heroName"></h1>
+          <div class="hero__typed-wrap">
+            <span class="hero__typed-prefix">I'm a</span>
+            <span class="hero__typed" id="heroTyped"></span>
+            <span class="hero__cursor">|</span>
+          </div>
+          <p class="hero__bio" id="heroBio"></p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">
+              <span>View Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--glass">Get in Touch</a>
+            <a href="" class="btn btn--glass" id="heroCvBtn" style="display:none;">Download CV</a>
+          </div>
+          <div class="hero__tags" id="heroTags"></div>
+        </div>
+        <div class="hero__avatar-wrap" id="heroAvatarWrap" style="display:none;">
+          <div class="hero__avatar">
+            <img id="heroAvatarImg" alt="Muhammad Hussain" src="">
+            <div class="hero__avatar-ring"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__stats" id="heroStats"></div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll to explore</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about__photo-col" id="aboutPhotoCol" style="display:none;">
+            <div class="about__photo">
+              <img id="aboutPhotoImg" alt="Muhammad Hussain" src="">
+              <div class="about__photo-border"></div>
+            </div>
+          </div>
+          <div class="about__content">
+            <div class="section-header reveal">
+              <span class="section-label">About Me</span>
+              <h2 class="section-title">Turning Data Into Software That Works</h2>
+            </div>
+            <p class="about__bio reveal" id="aboutBio"></p>
+            <div class="about__cards" id="aboutCards"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section--dark" id="experience">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Career Path</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-desc">From foundational learning to building real-world software and leading teams.</p>
+        </div>
+        <div class="experience">
+          <div class="experience__tabs">
+            <button class="experience__tab active" data-tab="work">Work Experience</button>
+            <button class="experience__tab" data-tab="education">Education</button>
+            <button class="experience__tab" data-tab="timeline">Full Timeline</button>
+          </div>
+          <div class="experience__panel active" id="panel-work"></div>
+          <div class="experience__panel" id="panel-education"></div>
+          <div class="experience__panel" id="panel-timeline">
+            <div class="timeline" id="timeline"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">Real-world applications built with databases, backend logic, and clean architecture.</p>
+        </div>
+        <div class="projects__filters" id="projectFilters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="featured">Featured</button>
+          <button class="filter-btn" data-filter="ai">AI-Powered</button>
+          <button class="filter-btn" data-filter="business">Business</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--dark" id="skills">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Tech Stack</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-desc">Technologies and concepts I work with, grouped by domain — with proficiency levels.</p>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Credentials</span>
+          <h2 class="section-title">Certifications & Achievements</h2>
+          <p class="section-desc">Validated skills from internships, courses, and competitions.</p>
+        </div>
+        <div class="cert-grid" id="certGrid"></div>
+        <div class="achievements">
+          <h3 class="achievements__title reveal">Leadership & Achievements</h3>
+          <div class="achievements-grid" id="achievementsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Zorvexa -->
+    <section class="section section--dark" id="services">
+      <div class="container">
+        <div class="services__hero">
+          <div class="section-header reveal">
+            <span class="section-label">Zorvexa</span>
+            <h2 class="section-title" id="zorvexaTitle">What I Can Build For You</h2>
+            <p class="section-desc" id="zorvexaDesc"></p>
+          </div>
+          <a href="" target="_blank" rel="noopener" class="btn btn--primary" id="zorvexaLink" style="display:none;">
+            <span>View on LinkedIn</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+          </a>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Let's Connect</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-desc">Open for freelance work, collaborations, and opportunities. Let's build something together.</p>
+        </div>
+        <div class="contact">
+          <div class="contact__info" id="contactInfo"></div>
+          <form class="contact__form" id="contactForm">
+            <div class="form-group">
+              <input type="text" name="name" id="cfName" required placeholder=" ">
+              <label for="cfName">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="cfEmail" required placeholder=" ">
+              <label for="cfEmail">Your Email</label>
+            </div>
+            <div class="form-group form-group--full">
+              <input type="text" name="subject" id="cfSubject" placeholder=" ">
+              <label for="cfSubject">Subject</label>
+            </div>
+            <div class="form-group form-group--full">
+              <textarea name="message" id="cfMessage" required placeholder=" " rows="5"></textarea>
+              <label for="cfMessage">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="nav__logo-icon">MH</span>
+            <span class="nav__logo-text">Hussain</span>
+          </a>
+          <p class="footer__tagline">Building database-driven software that solves real problems.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Navigation</h4>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer__social" id="footerSocial"></div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="footerYear"></span> Muhammad Hussain. All rights reserved.</p>
+        <p>Built with purpose and passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">&times;</button>
+    <div class="lightbox__content" id="lightboxContent"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
