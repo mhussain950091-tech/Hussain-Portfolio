@@ -1,16 +1,16 @@
 {
   "profile": {
     "name": "Muhammad Hussain",
-    "title": "Database & Software Developer",
-    "subtitle": "Software Engineering Student | Founder of Zorvexa | Aspiring Data Engineer",
+    "title": "Software Engineer",
+    "subtitle": "Database Engineer (PostgreSQL, MySQL, SQL Server,MongoBD) | Microsoft SQL Certified. ",
     "email": "mhussain950091@gmail.com",
     "phone": "+92 310 5324610",
-    "location": "Wah Cantt / Talagang, Pakistan",
+    "location": "Islamabad , Pakistan",
     "github": "https://github.com/mhussain950091-tech",
     "linkedin": "https://www.linkedin.com/in/muhammad-hussain-478731340/",
     "fiverr": "https://www.fiverr.com/m_hussain_123",
     "zorvexa_linkedin": "https://www.linkedin.com/company/zorvexa-data/",
-    "bio": "I build database-driven software that solves real business problems. From hotel management systems and POS applications to AI-powered synthetic data platforms, my work sits at the intersection of relational databases, backend logic, and practical software delivery. Currently pursuing BS Software Engineering at COMSATS University Islamabad while building Zorvexa — a software company focused on databases, development, and AI-enabled solutions.",
+    "bio": "I’m Muhammad Hussain, a Database Engineer and the founder of ZorVexa-Data. I help businesses and teams turn raw, scattered data into reliable, well-structured systems, from database design and migration to dashboards and AI-powered tools.\n\nMy core expertise is in PostgreSQL, MySQL, SQL Server, and MongoDB, backed by T-SQL, Java, and Python, and I am Microsoft SQL certified. Since 2024, I have delivered database solutions for clients on Upwork and Fiverr, working on schema design, relational data modeling, and the logic that keeps data accurate and consistent. I have also handled database migrations, including moving a database from MySQL to PostgreSQL.\n\nAlongside client work, I build and lead full products where the database is the foundation. I led a five-person team to build NovaSight, an AI-powered platform that converts raw CSV files into interactive dashboards. I led the database workflow of Synthora AI, a synthetic data platform developed at the HackDataV2 hackathon, covering primary and foreign key relationships and the flow of tabular, relational, and document data. I have also built a Point of Sale system for a client, and I am currently developing SmartlyPOS, an AI voice-controlled POS system for retail stores.\n\nThrough ZorVexa-Data, I work on data engineering, AI intelligence, and scalable technology, helping organizations build data systems they can trust and grow with. My approach is simple: a strong database makes everything built on top of it faster, cleaner, and easier to maintain.\n\n",
     "profileImage": "https://res.cloudinary.com/wzyad20a/image/upload/v1793115551/MY_professional_picture.png"
   },
   "projects": [
@@ -18,11 +18,12 @@
       "id": "synthora-ai",
       "title": "Synthora AI",
       "tagline": "Synthetic Data Generation Platform",
-      "description": "A platform that generates realistic synthetic datasets for testing and development — no real customer data needed. Supports tabular, relational, and document data with schema design, data integrity checks, and saved dataset management.",
+      "description": "Synthora AI is a synthetic data generation platform developed during the HackDataV2 hackathon. Real-world datasets are often scarce, sensitive, or restricted by privacy requirements, which slows development, testing, and analytics. Synthora AI addresses this by generating realistic artificial data that preserves the structure and relationships of real datasets, without exposing confidential information.\n\nMy Role\n\nAs Team Lead, I directed the project from planning through delivery. I coordinated the team, assigned responsibilities, and kept the work aligned with the hackathon timeline. I also owned the platform’s entire database workflow.\n\nKey Contributions\n\nDatabase architecture: Designed the data model and controlled how data moves through the platform.\nRelational integrity: Defined primary key and foreign key (PK-FK) relationships so that generated data stays consistent and valid across linked tables.\nMulti-format data flow: Managed the flow of tabular, relational, and document-based data, so the platform can handle both structured and semi-structured data.\nFrontend delivery: Built the user interface and deployed it on Vercel, making the platform accessible through a live web application.\nTeam coordination: Worked with the backend developer to integrate the database layer, backend services, and interface into a single working product.\n\nTechnical Focus\n\nDatabase design, PK-FK relationship modeling, relational and document data handling, synthetic data generation, and web deployment (Vercel).\n\nOutcome\n\nDelivered a working, deployed prototype within the hackathon timeframe, demonstrating a practical approach to privacy-safe data generation.",
       "role": "Team Leader — Database Engineering & Schema Design",
       "context": "HackDataV2 Project",
       "technologies": [
         "Python",
+        "SQL validation",
         "Database Design",
         "Relational Modeling",
         "Schema Validation",
@@ -31,14 +32,14 @@
       "liveUrl": "https://synthora-ai-nine.vercel.app/",
       "repoUrl": "https://github.com/mhussain950091-tech",
       "featured": true,
-      "image": "",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793124110/Capture_d_écran_2026-10-27_230138.png",
       "video": ""
     },
     {
       "id": "novasight",
       "title": "NovaSight",
       "tagline": "AI-Powered Dashboard Intelligence",
-      "description": "Upload CSV or Excel data and get automatic visual dashboards with KPIs, chart selection, and exportable reports. Built with database migration, session management, and AI chat integration.",
+      "description": "NovaSight is an AI-powered dashboard creation platform that turns raw CSV data into interactive, presentation-ready dashboards in minutes. It removes the need for manual charting and BI tool expertise, so non-technical users can explore and understand their data on their own.\n\nMy Role\n\nAs Project Lead, I led a team of five, from planning and task distribution to integration and delivery. I also contributed to the platform’s data and database design.\n\nKey Features\n\nCSV to dashboard: Users upload a raw CSV file, and the platform builds a dashboard automatically.\nSmart chart recommendations: Suggests suitable chart types based on the structure and content of the data.\nKPI cards: Highlights key metrics at a glance.\nInteractive filters: Sidebar filters let users explore the data dynamically.\nExport: Dashboards and results can be exported for reporting and sharing.\nAI integration: Integrates the Anthropic Claude API and Gemini API to add intelligence to the analysis workflow.\nSynthetic Data module (in development): A schema-builder interface for generating tabular, relational, and document datasets.\n\nTechnology Stack\n\nPython, Streamlit, MySQL, Plotly, Anthropic Claude API, Gemini API.\n\nImpact\n\nNovaSight makes data analysis accessible to people without technical or BI backgrounds, cutting the time from raw data to usable insight.",
       "role": "Full-stack Developer",
       "context": "Data Analytics Platform",
       "technologies": [
@@ -50,16 +51,16 @@
         "PostgreSQL"
       ],
       "liveUrl": "",
-      "repoUrl": "",
+      "repoUrl": "https://github.com/mhussain950091-tech",
       "featured": true,
-      "image": "",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793124695/novasight_cover.jpg",
       "video": ""
     },
     {
       "id": "fast-food-pos",
       "title": "Fast Food POS",
       "tagline": "Java Desktop Point-of-Sale System",
-      "description": "A complete POS application built for a Sargodha fast-food business. Handles sales, cart management, product inventory, payment processing (cash, card, online), and reporting — packaged as a standalone desktop installer.",
+      "description": "SmartlyPOS is a point-of-sale system for marts and retail stores, with an AI voice control layer on top. Cashiers and shop staff can speak to the system instead of searching menus and typing, which speeds up billing and reduces errors during busy hours.\n\nKey Features\n\nVoice price queries: Staff can ask for a product’s price by voice, for example “check price of Pepsi”, and get an instant answer.\nVoice order actions: Staff can build an order by speaking, for example “add two brushes and Safina chawal to order”. The AI understands the items and quantities, adds them to the order, and calculates the total price.\nCore POS functionality: A complete base system for managing products, orders, and billing, built before the voice layer is added.\n\nTechnology Stack\n\nFrontend: React, TypeScript\nBackend: FastAPI (Python)\nDatabase: PostgreSQL\nAI layer: Voice command understanding for queries and order actions\n\nMy Role\n\nI conceived, designed, and am building the entire system on my own, from product concept and database design to the interface and AI integration.\n\nCurrent Status\n\nThe base POS system is under development, and the product landing page is in progress. The voice control layer will be added once the core system is stable.",
       "role": "Solo Developer",
       "context": "Business Client Project",
       "technologies": [
@@ -71,15 +72,15 @@
       "liveUrl": "",
       "repoUrl": "https://github.com/mhussain950091-tech/personal-pos",
       "featured": true,
-      "image": "",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793124821/pos_client_cover.jpg",
       "video": ""
     },
     {
       "id": "sarina-hotel",
       "title": "Sarina Hotel Management System",
       "tagline": "Hotel Operations & Records Platform",
-      "description": "Desktop application managing rooms, guests, bookings, facilities, billing, staff, and departments. Demonstrates relational schema design, CRUD operations, and full application-database integration.",
-      "role": "Developer",
+      "description": "The Hotel Management System is a database-driven application that manages the daily operations of a hotel in one place. It replaces manual registers and scattered records with a structured system for guest registration, room allocation, bookings, check-in and check-out, and billing.\n\nThe system keeps room availability up to date, prevents double bookings, and stores every guest record and transaction in a relational database. This gives hotel staff accurate information and reduces errors in daily work.\n\nMy role: I worked on the project as part of a team, contributing to the database design and the system’s core logic, including the relationships between guests, rooms, bookings, and billing.",
+      "role": "Junior Developer",
       "context": "CodeAlpha Internship Project",
       "technologies": [
         "Java Swing",
@@ -89,26 +90,7 @@
       "liveUrl": "",
       "repoUrl": "https://github.com/mhussain950091-tech/Code-alpha_hotel_management_system",
       "featured": true,
-      "image": "",
-      "video": ""
-    },
-    {
-      "id": "apni-wah-biryani",
-      "title": "Apni Wah Biryani",
-      "tagline": "Food-Ordering System Design",
-      "description": "System design for a food-ordering platform with customer website, admin panel, menu management, and multiple payment options (WhatsApp, Easypaisa, Cash). Includes requirements analysis, use cases, and data-flow diagrams.",
-      "role": "System Designer",
-      "context": "In Development",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Database Design"
-      ],
-      "liveUrl": "",
-      "repoUrl": "",
-      "featured": false,
-      "image": "",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793125146/hotel_management_gold_cover.jpg",
       "video": ""
     }
   ],
@@ -133,10 +115,6 @@
       "C++",
       "JavaScript"
     ],
-    "Desktop Development": [
-      "Java Swing",
-      "JDBC"
-    ],
     "Data & Analytics": [
       "pandas",
       "NumPy",
@@ -154,18 +132,9 @@
       "GitHub",
       "Launch4j",
       "Vercel"
-    ],
-    "Currently Learning": [
-      "Flutter",
-      "Dart",
-      "Mobile Development"
     ]
   },
   "journey": [
-    {
-      "period": "Before University",
-      "event": "FSc ICS from Punjab College Talagang — 977/1200 marks"
-    },
     {
       "period": "Sep 2024",
       "event": "Started BS Software Engineering at COMSATS University Islamabad, Wah Campus"
@@ -177,10 +146,6 @@
     {
       "period": "2025",
       "event": "Developed interest in SQL, relational database design, and Java desktop applications"
-    },
-    {
-      "period": "Late 2025",
-      "event": "Built Sarina Hotel Management System — rooms, guests, bookings, payments with full database integration"
     },
     {
       "period": "Early 2026",
@@ -212,29 +177,43 @@
       "title": "Java Programming Internship",
       "issuer": "CodeAlpha",
       "date": "2025",
-      "description": "Internship work with certificate and recommendation letter",
+      "description": "Completed a one-month virtual internship in Java programming, strengthening practical programming experience and analytical problem-solving skills. Received a letter of recommendation recognizing adaptability, productivity, collaboration, and a commitment to learning new technologies.",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793119835/Certificate.jpg"
+    },
+    {
+      "title": "Microsoft SQL Certified",
+      "issuer": "Microsoft",
+      "date": "June 2026",
+      "description": "Strengthened foundational knowledge of SQL and relational databases, with an emphasis on understanding structured data and using queries to retrieve meaningful information. Built a stronger foundation for database development, data exploration, and reporting within database-driven applications.",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793120459/Capture_d_écran_2026-10-27_215939.png"
+    },
+    {
+      "title": "Introduction to Prompt Engineering",
+      "issuer": "SimpliLearn",
+      "date": "Feb 2026",
+      "description": "Developed a foundational understanding of prompt engineering and the role of clear instructions in guiding generative AI responses. Strengthened the ability to communicate task requirements effectively when using AI tools for learning, content creation, and software development support.",
       "image": ""
     },
     {
-      "title": "Machine Learning Internship",
-      "issuer": "CodeAlpha",
-      "date": "2025",
-      "description": "Credit Scoring classification project",
-      "image": ""
+      "title": "Get Started with SQL Analytics and BI on Databricks",
+      "issuer": "SimpliLearn",
+      "date": "Feb 2026",
+      "description": "Gained introductory knowledge of SQL analytics and business intelligence on Databricks. Developed an understanding of how SQL-based analysis supports data exploration, reporting, and business insights, extending a database development foundation toward analytical workflows.",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793123983/Capture_d_écran_2026-10-27_225917.png"
     },
     {
-      "title": "SQL Certificate",
-      "issuer": "Simplilearn",
-      "date": "January 2026",
-      "description": "SQL fundamentals and database querying",
-      "image": ""
+      "title": "Getting Started with Git and GitHub",
+      "issuer": "IBM",
+      "date": "July 2026",
+      "description": "Developed a foundational understanding of version control with Git and GitHub, including managing source code, tracking changes, and supporting collaborative development. Strengthened the knowledge needed to maintain organized repositories and contribute to structured software development workflows.",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793123880/Capture_d_écran_2026-10-27_225730.png"
     },
     {
-      "title": "Generative AI Certificate",
-      "issuer": "—",
-      "date": "January 2026",
-      "description": "Generative AI foundations",
-      "image": ""
+      "title": "Introduction to SQL",
+      "issuer": "SimpliLearn",
+      "date": "Feb 2026",
+      "description": "Starting with SQL ,Optimizing Query and Build Database Schema",
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793119841/Introduction_to_SQL.pdf.jpg"
     }
   ],
   "leadership": [
