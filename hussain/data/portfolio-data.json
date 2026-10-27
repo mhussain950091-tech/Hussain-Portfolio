@@ -11,9 +11,7 @@
     "fiverr": "https://www.fiverr.com/m_hussain_123",
     "zorvexa_linkedin": "https://www.linkedin.com/company/zorvexa-data/",
     "bio": "I build database-driven software that solves real business problems. From hotel management systems and POS applications to AI-powered synthetic data platforms, my work sits at the intersection of relational databases, backend logic, and practical software delivery. Currently pursuing BS Software Engineering at COMSATS University Islamabad while building Zorvexa — a software company focused on databases, development, and AI-enabled solutions.",
-    "profileImage": "https://res.cloudinary.com/wzyad20a/image/upload/v1793115551/MY_professional_picture.png",
-    "availableForWork": true,
-    "cvUrl": ""
+    "profileImage": "https://res.cloudinary.com/wzyad20a/image/upload/v1793115551/MY_professional_picture.png"
   },
   "projects": [
     {
@@ -23,8 +21,13 @@
       "description": "A platform that generates realistic synthetic datasets for testing and development — no real customer data needed. Supports tabular, relational, and document data with schema design, data integrity checks, and saved dataset management.",
       "role": "Team Leader — Database Engineering & Schema Design",
       "context": "HackDataV2 Project",
-      "category": "ai",
-      "technologies": ["Python", "Database Design", "Relational Modeling", "Schema Validation", "Vercel"],
+      "technologies": [
+        "Python",
+        "Database Design",
+        "Relational Modeling",
+        "Schema Validation",
+        "Vercel"
+      ],
       "liveUrl": "https://synthora-ai-nine.vercel.app/",
       "repoUrl": "https://github.com/mhussain950091-tech",
       "featured": true,
@@ -38,8 +41,14 @@
       "description": "Upload CSV or Excel data and get automatic visual dashboards with KPIs, chart selection, and exportable reports. Built with database migration, session management, and AI chat integration.",
       "role": "Full-stack Developer",
       "context": "Data Analytics Platform",
-      "category": "ai",
-      "technologies": ["Python", "Streamlit", "pandas", "NumPy", "Plotly", "PostgreSQL"],
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "pandas",
+        "NumPy",
+        "Plotly",
+        "PostgreSQL"
+      ],
       "liveUrl": "",
       "repoUrl": "",
       "featured": true,
@@ -53,8 +62,12 @@
       "description": "A complete POS application built for a Sargodha fast-food business. Handles sales, cart management, product inventory, payment processing (cash, card, online), and reporting — packaged as a standalone desktop installer.",
       "role": "Solo Developer",
       "context": "Business Client Project",
-      "category": "business",
-      "technologies": ["Java Swing", "JDBC", "MySQL", "Launch4j"],
+      "technologies": [
+        "Java Swing",
+        "JDBC",
+        "MySQL",
+        "Launch4j"
+      ],
       "liveUrl": "",
       "repoUrl": "https://github.com/mhussain950091-tech/personal-pos",
       "featured": true,
@@ -68,8 +81,11 @@
       "description": "Desktop application managing rooms, guests, bookings, facilities, billing, staff, and departments. Demonstrates relational schema design, CRUD operations, and full application-database integration.",
       "role": "Developer",
       "context": "CodeAlpha Internship Project",
-      "category": "business",
-      "technologies": ["Java Swing", "JDBC", "MySQL"],
+      "technologies": [
+        "Java Swing",
+        "JDBC",
+        "MySQL"
+      ],
       "liveUrl": "",
       "repoUrl": "https://github.com/mhussain950091-tech/Code-alpha_hotel_management_system",
       "featured": true,
@@ -83,8 +99,12 @@
       "description": "System design for a food-ordering platform with customer website, admin panel, menu management, and multiple payment options (WhatsApp, Easypaisa, Cash). Includes requirements analysis, use cases, and data-flow diagrams.",
       "role": "System Designer",
       "context": "In Development",
-      "category": "business",
-      "technologies": ["HTML", "CSS", "JavaScript", "Database Design"],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Database Design"
+      ],
       "liveUrl": "",
       "repoUrl": "",
       "featured": false,
@@ -93,182 +113,155 @@
     }
   ],
   "skills": {
-    "Database Systems": {
-      "icon": "database",
-      "items": [
-        {"name": "MySQL", "level": 90},
-        {"name": "PostgreSQL", "level": 80},
-        {"name": "SQL Server", "level": 70},
-        {"name": "Oracle 21c", "level": 65}
-      ]
-    },
-    "Database Concepts": {
-      "icon": "schema",
-      "items": [
-        {"name": "SQL", "level": 90},
-        {"name": "ER Diagrams", "level": 85},
-        {"name": "Normalization", "level": 85},
-        {"name": "Relational Modeling", "level": 85},
-        {"name": "Schema Design", "level": 90},
-        {"name": "Data Integrity", "level": 80}
-      ]
-    },
-    "Programming": {
-      "icon": "code",
-      "items": [
-        {"name": "Java", "level": 85},
-        {"name": "Python", "level": 85},
-        {"name": "C++", "level": 70},
-        {"name": "JavaScript", "level": 65}
-      ]
-    },
-    "Desktop Development": {
-      "icon": "desktop",
-      "items": [
-        {"name": "Java Swing", "level": 85},
-        {"name": "JDBC", "level": 80}
-      ]
-    },
-    "Data & Analytics": {
-      "icon": "chart",
-      "items": [
-        {"name": "pandas", "level": 80},
-        {"name": "NumPy", "level": 75},
-        {"name": "Streamlit", "level": 80},
-        {"name": "Plotly", "level": 75},
-        {"name": "Power BI", "level": 70}
-      ]
-    },
-    "Web Foundations": {
-      "icon": "web",
-      "items": [
-        {"name": "HTML", "level": 75},
-        {"name": "CSS", "level": 70},
-        {"name": "JavaScript", "level": 65}
-      ]
-    },
-    "Tools & Deployment": {
-      "icon": "tools",
-      "items": [
-        {"name": "Git", "level": 80},
-        {"name": "GitHub", "level": 80},
-        {"name": "Launch4j", "level": 70},
-        {"name": "Vercel", "level": 75}
-      ]
-    },
-    "Currently Learning": {
-      "icon": "learning",
-      "items": [
-        {"name": "Flutter", "level": 30},
-        {"name": "Dart", "level": 25},
-        {"name": "Mobile Development", "level": 25}
-      ]
-    }
+    "Database Systems": [
+      "MySQL",
+      "PostgreSQL",
+      "SQL Server",
+      "Oracle 21c"
+    ],
+    "Database Concepts": [
+      "SQL",
+      "ER Diagrams",
+      "Normalization",
+      "Relational Modeling",
+      "Schema Design",
+      "Data Integrity"
+    ],
+    "Programming": [
+      "Java",
+      "Python",
+      "C++",
+      "JavaScript"
+    ],
+    "Desktop Development": [
+      "Java Swing",
+      "JDBC"
+    ],
+    "Data & Analytics": [
+      "pandas",
+      "NumPy",
+      "Streamlit",
+      "Plotly",
+      "Power BI"
+    ],
+    "Web Foundations": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "Tools & Deployment": [
+      "Git",
+      "GitHub",
+      "Launch4j",
+      "Vercel"
+    ],
+    "Currently Learning": [
+      "Flutter",
+      "Dart",
+      "Mobile Development"
+    ]
   },
-  "experience": [
-    {
-      "title": "Founder & CEO",
-      "company": "Zorvexa",
-      "period": "Sep 2026 – Present",
-      "type": "work",
-      "description": "Building a software company focused on databases, development, and AI-enabled solutions. Establishing company identity, service offerings, and client relationships.",
-      "highlights": ["Database Design Services", "Python Analytics Tools", "Java Desktop Applications"]
-    },
-    {
-      "title": "Team Leader",
-      "company": "Synthora AI — HackDataV2",
-      "period": "Sep 2026",
-      "type": "work",
-      "description": "Led a three-member team to build a synthetic data generation platform for the HackDataV2 hackathon. Handled database engineering, schema design, and team coordination.",
-      "highlights": ["Team Leadership", "Database Engineering", "Hackathon Winner"]
-    },
-    {
-      "title": "Machine Learning Intern",
-      "company": "CodeAlpha",
-      "period": "2025",
-      "type": "work",
-      "description": "Completed a machine learning internship focused on credit scoring classification. Applied ML algorithms to financial data for risk assessment.",
-      "highlights": ["Credit Scoring", "Classification Models", "Data Analysis"]
-    },
-    {
-      "title": "Java Programming Intern",
-      "company": "CodeAlpha",
-      "period": "2025",
-      "type": "work",
-      "description": "Developed Java desktop applications during internship. Built the Sarina Hotel Management System as the primary project with full database integration.",
-      "highlights": ["Java Swing", "JDBC", "MySQL Integration"]
-    }
-  ],
-  "education": [
-    {
-      "degree": "BS Software Engineering",
-      "institution": "COMSATS University Islamabad, Wah Campus",
-      "period": "Sep 2024 – Present",
-      "description": "Studying software engineering with focus on databases, algorithms, and software development methodologies."
-    },
-    {
-      "degree": "FSc ICS (Intermediate Computer Science)",
-      "institution": "Punjab College Talagang",
-      "period": "Completed Before University",
-      "description": "Scored 977/1200 marks. Built foundation in computer science fundamentals."
-    }
-  ],
   "journey": [
-    {"period": "Before University", "event": "FSc ICS from Punjab College Talagang — 977/1200 marks"},
-    {"period": "Sep 2024", "event": "Started BS Software Engineering at COMSATS University Islamabad, Wah Campus"},
-    {"period": "2024–2025", "event": "Built foundation in C++, databases, digital logic, and software development"},
-    {"period": "2025", "event": "Developed interest in SQL, relational database design, and Java desktop applications"},
-    {"period": "Late 2025", "event": "Built Sarina Hotel Management System — rooms, guests, bookings, payments with full database integration"},
-    {"period": "Early 2026", "event": "Developed Fast Food POS for a Sargodha business using Java Swing and MySQL"},
-    {"period": "2026", "event": "Expanded into Python, pandas, Streamlit, and analytics dashboards"},
-    {"period": "Mid 2026", "event": "Built NovaSight — converting uploaded data into dashboards and insights"},
-    {"period": "Sep 2026", "event": "Led three-member team to build Synthora AI for HackDataV2"},
-    {"period": "Sep–Oct 2026", "event": "Founded Zorvexa — developing company identity and LinkedIn presence"},
-    {"period": "Oct 2026", "event": "Continued into web development, Flutter, and food-ordering system planning"}
+    {
+      "period": "Before University",
+      "event": "FSc ICS from Punjab College Talagang — 977/1200 marks"
+    },
+    {
+      "period": "Sep 2024",
+      "event": "Started BS Software Engineering at COMSATS University Islamabad, Wah Campus"
+    },
+    {
+      "period": "2024–2025",
+      "event": "Built foundation in C++, databases, digital logic, and software development"
+    },
+    {
+      "period": "2025",
+      "event": "Developed interest in SQL, relational database design, and Java desktop applications"
+    },
+    {
+      "period": "Late 2025",
+      "event": "Built Sarina Hotel Management System — rooms, guests, bookings, payments with full database integration"
+    },
+    {
+      "period": "Early 2026",
+      "event": "Developed Fast Food POS for a Sargodha business using Java Swing and MySQL"
+    },
+    {
+      "period": "2026",
+      "event": "Expanded into Python, pandas, Streamlit, and analytics dashboards"
+    },
+    {
+      "period": "Mid 2026",
+      "event": "Built NovaSight — converting uploaded data into dashboards and insights"
+    },
+    {
+      "period": "Sep 2026",
+      "event": "Led three-member team to build Synthora AI for HackDataV2"
+    },
+    {
+      "period": "Sep–Oct 2026",
+      "event": "Founded Zorvexa — developing company identity and LinkedIn presence"
+    },
+    {
+      "period": "Oct 2026",
+      "event": "Continued into web development, Flutter, and food-ordering system planning"
+    }
   ],
   "certifications": [
-    {"title": "Java Programming Internship", "issuer": "CodeAlpha", "date": "2025", "description": "Internship work with certificate and recommendation letter", "image": ""},
-    {"title": "Machine Learning Internship", "issuer": "CodeAlpha", "date": "2025", "description": "Credit Scoring classification project", "image": ""},
-    {"title": "SQL Certificate", "issuer": "Simplilearn", "date": "January 2026", "description": "SQL fundamentals and database querying", "image": ""},
-    {"title": "Generative AI Certificate", "issuer": "—", "date": "January 2026", "description": "Generative AI foundations", "image": ""}
+    {
+      "title": "Java Programming Internship",
+      "issuer": "CodeAlpha",
+      "date": "2025",
+      "description": "Internship work with certificate and recommendation letter",
+      "image": ""
+    },
+    {
+      "title": "Machine Learning Internship",
+      "issuer": "CodeAlpha",
+      "date": "2025",
+      "description": "Credit Scoring classification project",
+      "image": ""
+    },
+    {
+      "title": "SQL Certificate",
+      "issuer": "Simplilearn",
+      "date": "January 2026",
+      "description": "SQL fundamentals and database querying",
+      "image": ""
+    },
+    {
+      "title": "Generative AI Certificate",
+      "issuer": "—",
+      "date": "January 2026",
+      "description": "Generative AI foundations",
+      "image": ""
+    }
   ],
   "leadership": [
-    {"role": "Head of Events", "org": "COMSATS Heritage Society", "description": "Progressed from junior/executive responsibilities to events leadership"},
-    {"role": "Punjab Culture Head", "org": "COMSATS Heritage Society", "description": "Led cultural programming and event coordination"},
-    {"role": "Team Leader", "org": "Synthora AI — HackDataV2", "description": "Led three-member development team"},
-    {"role": "Founder & CEO", "org": "Zorvexa", "description": "Building a software company focused on databases, development, and AI solutions"},
-    {"role": "Badminton Captain", "org": "College Team", "description": "College captain, district Talagang silver medal"}
-  ],
-  "services": [
     {
-      "title": "Database Design",
-      "description": "Relational schema design, ER diagrams, normalization, and data integrity for your business applications.",
-      "icon": "database"
+      "role": "Head of Events",
+      "org": "COMSATS Heritage Society",
+      "description": "Progressed from junior/executive responsibilities to events leadership"
     },
     {
-      "title": "Desktop Applications",
-      "description": "Custom Java Swing business applications with full database integration and installer packaging.",
-      "icon": "desktop"
+      "role": "Punjab Culture Head",
+      "org": "COMSATS Heritage Society",
+      "description": "Led cultural programming and event coordination"
     },
     {
-      "title": "Data Dashboards",
-      "description": "Interactive Python dashboards with Streamlit, Plotly, and pandas for visualizing your business data.",
-      "icon": "chart"
+      "role": "Team Leader",
+      "org": "Synthora AI — HackDataV2",
+      "description": "Led three-member development team"
     },
     {
-      "title": "SQL & Integration",
-      "description": "Complex SQL queries, database migration, optimization, and application-database integration.",
-      "icon": "code"
+      "role": "Founder & CEO",
+      "org": "Zorvexa",
+      "description": "Building a software company focused on databases, development, and AI solutions"
     },
     {
-      "title": "AI Solutions",
-      "description": "AI-powered tools for synthetic data generation, analytics automation, and intelligent reporting.",
-      "icon": "ai"
-    },
-    {
-      "title": "Web Development",
-      "description": "Responsive websites and web applications with modern design and clean, maintainable code.",
-      "icon": "web"
+      "role": "Badminton Captain",
+      "org": "College Team",
+      "description": "College captain, district Talagang silver medal"
     }
   ],
   "zorvexa": {
