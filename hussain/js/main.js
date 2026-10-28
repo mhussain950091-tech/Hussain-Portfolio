@@ -9,7 +9,7 @@
   /* ── Constants ── */
   var DATA_URL = 'data/portfolio-data.json';
   var LS_KEY  = 'hussain_portfolio_data';
-  var PAGES = ['home', 'about', 'experience', 'projects', 'skills', 'certifications', 'services', 'contact'];
+  var PAGES = ['about', 'experience', 'projects', 'skills', 'certifications', 'services', 'contact'];
 
   /* ── SVG Icon Library ── */
   var Icons = {
@@ -39,6 +39,8 @@
     cert: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v4l3 3"/></svg>'
   };
 
+  Icons.fiverr = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 21V10H5V7h3V6c0-3 2-5 5-5h3v3h-3c-1 0-2 1-2 2v1h8v11h2v3h-7v-3h2v-8h-5v11z"/><circle cx="18" cy="3" r="2"/></svg>';
+  Icons.whatsapp = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.4 7.8L3 21l1.7-4.6A9 9 0 1 1 21 11.5Z"/><path d="M8 7c-2 4 4 10 8 8l-2-3-2 1-2-2 1-2z"/></svg>';
   function getIcon(name) { return Icons[name] || Icons.code; }
 
   /* ── Utility Helpers ── */
@@ -57,15 +59,15 @@
 
   /* ═══════ PAGE ROUTER ═══════ */
 
-  var currentPage = 'home';
+  var currentPage = 'about';
 
   function getPageFromHash() {
-    var hash = window.location.hash.replace('#', '') || 'home';
-    return PAGES.indexOf(hash) !== -1 ? hash : 'home';
+    var hash = window.location.hash.replace('#', '') || 'about';
+    return PAGES.indexOf(hash) !== -1 ? hash : 'about';
   }
 
   function navigateTo(pageName) {
-    if (PAGES.indexOf(pageName) === -1) pageName = 'home';
+    if (PAGES.indexOf(pageName) === -1) pageName = 'about';
     if (pageName === currentPage) return;
 
     // Hide all pages
@@ -93,6 +95,11 @@
     }
 
     currentPage = pageName;
+    document.querySelector('.footer').hidden = pageName !== 'contact';
+    document.querySelectorAll('.nav__links a').forEach(function (link) {
+      if (link.dataset.page === pageName) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -122,15 +129,6 @@
         el.classList.add('visible');
       }, 60);
     });
-
-    // Re-trigger counter animations on home page
-    if (pageName === 'home') {
-      page.querySelectorAll('.counter').forEach(function (c) {
-        c.dataset.animated = '';
-        c.textContent = '0';
-      });
-      initCounterAnimation();
-    }
 
     // Re-trigger skill bars on skills page
     if (pageName === 'skills') {
@@ -172,7 +170,6 @@
   /* ── Main Init ── */
   function init(data) {
     if (!data) return;
-    renderHero(data);
     renderAbout(data);
     renderExperience(data);
     renderProjects(data);
@@ -183,8 +180,6 @@
     renderContact(data);
     renderFooter(data);
     initNavigation();
-    initHeroCanvas();
-    initTypingAnimation(data);
     initCounterAnimation();
     initSkillBarAnimation();
     initLightbox();
@@ -195,54 +190,6 @@
   }
 
   /* ═══════ RENDERERS ═══════ */
-
-  /* ── Hero ── */
-  function renderHero(data) {
-    var p = data.profile;
-    var nameEl = document.getElementById('heroName');
-    if (nameEl) {
-      var parts = p.name.split(' ');
-      nameEl.innerHTML = esc(parts[0]) + ' <span class="accent">' + esc(parts.slice(1).join(' ')) + '</span>';
-    }
-    setText('heroBio', p.bio);
-    var badge = document.getElementById('heroBadge');
-    if (badge) badge.style.display = p.availableForWork ? '' : 'none';
-
-    var cvBtn = document.getElementById('heroCvBtn');
-    if (cvBtn && p.cvUrl) { cvBtn.href = p.cvUrl; cvBtn.style.display = ''; }
-
-    var avatarWrap = document.getElementById('heroAvatarWrap');
-    var avatarImg = document.getElementById('heroAvatarImg');
-    if (avatarWrap && avatarImg && p.profileImage) {
-      avatarImg.src = p.profileImage;
-      avatarImg.alt = p.name;
-      avatarWrap.style.display = '';
-    }
-
-    var tags = document.getElementById('heroTags');
-    if (tags && p.subtitle) {
-      tags.innerHTML = p.subtitle.split('|').map(function (t) {
-        return '<span class="tag">' + esc(t.trim()) + '</span>';
-      }).join('');
-    }
-
-    var stats = document.getElementById('heroStats');
-    if (stats) {
-      var projCount = (data.projects || []).length;
-      var certCount = (data.certifications || []).length;
-      var skillCount = 0;
-      if (data.skills) {
-        Object.keys(data.skills).forEach(function (k) {
-          var grp = data.skills[k];
-          skillCount += (grp.items ? grp.items.length : (Array.isArray(grp) ? grp.length : 0));
-        });
-      }
-      stats.innerHTML =
-        '<div class="hero__stat"><div class="hero__stat-num counter" data-target="' + projCount + '">0</div><div class="hero__stat-label">Projects Built</div></div>' +
-        '<div class="hero__stat"><div class="hero__stat-num counter" data-target="' + certCount + '">0</div><div class="hero__stat-label">Certifications</div></div>' +
-        '<div class="hero__stat"><div class="hero__stat-num counter" data-target="' + skillCount + '">0</div><div class="hero__stat-label">Technologies</div></div>';
-    }
-  }
 
   /* ── About ── */
   function renderAbout(data) {
@@ -260,7 +207,7 @@
     if (!cards) return;
     var items = [
       { icon: Icons.location, label: 'Location', value: p.location || '—' },
-      { icon: Icons.briefcase, label: 'Experience', value: (data.experience || []).length + '+ Roles' },
+      { icon: Icons.code, label: 'Projects', value: (data.projects || []).length + ' Projects Built' },
       { icon: Icons.graduation, label: 'Education', value: 'BSSE @ COMSATS' }
     ];
     cards.innerHTML = items.map(function (c) {
@@ -277,6 +224,9 @@
     var workPanel = document.getElementById('panel-work');
     var eduPanel = document.getElementById('panel-education');
     var timelineEl = document.getElementById('timeline');
+
+    if (workPanel && !(data.experience || []).length) workPanel.innerHTML = '<p class="page-subtitle">Explore my project work and career milestones in the Full Timeline tab.</p>';
+    if (eduPanel && !(data.education || []).length) eduPanel.innerHTML = '<p class="page-subtitle">BS Software Engineering · COMSATS University Islamabad, Wah Campus · Started September 2024.</p>';
 
     if (workPanel && data.experience) {
       workPanel.innerHTML = data.experience.map(function (e) {
@@ -441,15 +391,19 @@
   /* ── Services ── */
   function renderServices(data) {
     var grid = document.getElementById('servicesGrid');
-    if (!grid || !data.services) return;
+    if (!grid) return;
 
     if (data.zorvexa) {
       setText('zorvexaDesc', data.zorvexa.focus || '');
+      setText('zorvexaName', data.zorvexa.name);
+      setText('zorvexaIntro', data.zorvexa.introduction);
+      setText('zorvexaMission', data.zorvexa.mission);
       var link = document.getElementById('zorvexaLink');
       if (link && data.zorvexa.linkedin) { link.href = data.zorvexa.linkedin; link.style.display = ''; }
     }
 
-    grid.innerHTML = data.services.map(function (s) {
+    grid.innerHTML = ((data.zorvexa && data.zorvexa.services) || data.services || []).map(function (s) {
+      if (typeof s === 'string') s = { title: s, description: '', icon: 'database' };
       return '<div class="service-card card-reveal">' +
         '<div class="service-card__icon">' + getIcon(s.icon || 'code') + '</div>' +
         '<h3 class="service-card__title">' + esc(s.title) + '</h3>' +
@@ -471,6 +425,7 @@
     if (p.linkedin) items.push({ icon: Icons.linkedin, label: 'LinkedIn', value: '<a href="' + esc(p.linkedin) + '" target="_blank" rel="noopener">LinkedIn Profile</a>' });
     if (p.fiverr)   items.push({ icon: Icons.fiverr, label: 'Fiverr', value: '<a href="' + esc(p.fiverr) + '" target="_blank" rel="noopener">Fiverr Profile</a>' });
 
+    if (p.phone) items.push({ icon: Icons.whatsapp, label: 'WhatsApp', value: '<a href="https://wa.me/' + p.phone.replace(/\D/g, '') + '" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>' });
     el.innerHTML = items.map(function (c) {
       return '<div class="contact-item">' +
         '<div class="contact-item__icon">' + c.icon + '</div>' +
@@ -519,126 +474,6 @@
         links.classList.toggle('active');
       });
     }
-  }
-
-  /* ── Hero Canvas Animation ── */
-  function initHeroCanvas() {
-    var canvas = document.getElementById('heroCanvas');
-    if (!canvas) return;
-    var ctx = canvas.getContext('2d');
-    var particles = [];
-    var mouse = { x: -999, y: -999 };
-
-    function resize() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    document.addEventListener('mousemove', function (e) {
-      var r = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - r.left;
-      mouse.y = e.clientY - r.top;
-    });
-
-    var count = Math.min(80, Math.floor(canvas.width * canvas.height / 15000));
-    for (var i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        radius: Math.random() * 1.5 + 0.5
-      });
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach(function (p) {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0) p.x = canvas.width;
-        if (p.x > canvas.width) p.x = 0;
-        if (p.y < 0) p.y = canvas.height;
-        if (p.y > canvas.height) p.y = 0;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(129, 140, 248, 0.3)';
-        ctx.fill();
-      });
-
-      for (var i = 0; i < particles.length; i++) {
-        for (var j = i + 1; j < particles.length; j++) {
-          var dx = particles[i].x - particles[j].x;
-          var dy = particles[i].y - particles[j].y;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = 'rgba(129, 140, 248, ' + (0.06 * (1 - dist / 120)) + ')';
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-
-        var mdx = particles[i].x - mouse.x;
-        var mdy = particles[i].y - mouse.y;
-        var mDist = Math.sqrt(mdx * mdx + mdy * mdy);
-        if (mDist < 150) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = 'rgba(129, 140, 248, ' + (0.15 * (1 - mDist / 150)) + ')';
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
-        }
-      }
-
-      requestAnimationFrame(draw);
-    }
-    draw();
-  }
-
-  /* ── Typing Animation ── */
-  function initTypingAnimation(data) {
-    var el = document.getElementById('heroTyped');
-    if (!el) return;
-    var phrases = [
-      data.profile.title || 'Software Developer',
-      'Database Engineer',
-      'Founder of Zorvexa',
-      'Software Engineering Student'
-    ];
-    var phraseIdx = 0, charIdx = 0, deleting = false;
-
-    function tick() {
-      var current = phrases[phraseIdx];
-      if (deleting) {
-        charIdx--;
-        el.textContent = current.substring(0, charIdx);
-        if (charIdx === 0) {
-          deleting = false;
-          phraseIdx = (phraseIdx + 1) % phrases.length;
-          setTimeout(tick, 400);
-          return;
-        }
-        setTimeout(tick, 35);
-      } else {
-        charIdx++;
-        el.textContent = current.substring(0, charIdx);
-        if (charIdx === current.length) {
-          deleting = true;
-          setTimeout(tick, 2200);
-          return;
-        }
-        setTimeout(tick, 70);
-      }
-    }
-    setTimeout(tick, 800);
   }
 
   /* ── Counter Animation ── */
@@ -729,17 +564,32 @@
   function initContactForm() {
     var form = document.getElementById('contactForm');
     if (!form) return;
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
       var btn = form.querySelector('button[type="submit"]');
-      if (btn) {
-        btn.innerHTML = '<span>Message Sent!</span>';
-        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-        setTimeout(function () {
-          btn.innerHTML = '<span>Send Message</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>';
-          btn.style.background = '';
-          form.reset();
-        }, 2500);
+      if (btn.disabled) return;
+      var status = document.getElementById('contactStatus');
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Sending…';
+      status.textContent = '';
+      status.className = 'contact-status';
+      try {
+        var response = await fetch('/api/contact', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form))),
+          signal: AbortSignal.timeout(20000)
+        });
+        var result = await response.json();
+        if (!response.ok || !result.ok) throw new Error(result.error || 'Unable to send your message. Please try email or WhatsApp.');
+        status.textContent = 'Message sent successfully. Thank you for reaching out!';
+        status.classList.add('is-success');
+        form.reset();
+      } catch (err) {
+        status.textContent = err.name === 'TimeoutError' ? 'Delivery could not be confirmed. Please contact me by email or WhatsApp.' : (err.message || 'Unable to send. Please try again.');
+        status.classList.add('is-error');
+      } finally {
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Send Message';
       }
     });
   }
@@ -797,3 +647,4 @@
   });
 
 })();
+

@@ -90,7 +90,7 @@
   function saveData() {
     try {
       localStorage.setItem(ADMIN_KEY, JSON.stringify(data));
-      toast('Saved successfully');
+      toast('Draft saved. Export JSON to publish your changes.');
     } catch (e) {
       toast('Save failed', true);
     }
@@ -126,8 +126,15 @@
   }
 
   // ── Data Loading ──
-  function loadAndRender() {
-    data = JSON.parse(JSON.stringify(BASE_DATA));
+  async function loadAndRender() {
+    try {
+      const response = await fetch('../data/portfolio-data.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Load failed');
+      data = await response.json();
+    } catch (error) {
+      toast('Could not load published data. Please reload before editing.', true);
+      return;
+    }
     try {
       const overrides = localStorage.getItem(ADMIN_KEY);
       if (overrides) {
@@ -645,6 +652,8 @@
   function renderZorvexa() {
     const z = data.zorvexa || {};
     qs('#zv-name').value = z.name || '';
+    qs('#zv-introduction').value = z.introduction || '';
+    qs('#zv-mission').value = z.mission || '';
     qs('#zv-role').value = z.role || '';
     qs('#zv-focus').value = z.focus || '';
     qs('#zv-linkedin').value = z.linkedin || '';
@@ -656,6 +665,8 @@
       e.preventDefault();
       if (!data.zorvexa) data.zorvexa = {};
       data.zorvexa.name = qs('#zv-name').value;
+      data.zorvexa.introduction = qs('#zv-introduction').value;
+      data.zorvexa.mission = qs('#zv-mission').value;
       data.zorvexa.role = qs('#zv-role').value;
       data.zorvexa.focus = qs('#zv-focus').value;
       data.zorvexa.linkedin = qs('#zv-linkedin').value;
@@ -746,3 +757,4 @@
     init();
   }
 })();
+

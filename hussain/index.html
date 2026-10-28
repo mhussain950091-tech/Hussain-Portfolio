@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Hussain — Database & Software Developer</title>
   <meta name="description" content="Portfolio of Muhammad Hussain — Database & Software Developer, Founder of Zorvexa, Software Engineering student at COMSATS University Islamabad.">
-  <meta name="theme-color" content="#6366f1">
+  <meta name="theme-color" content="#081c29">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,83 +16,32 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#home" class="nav__logo">
+      <a href="#about" class="nav__logo">
         <span class="nav__logo-icon">MH</span>
         <span class="nav__logo-text">Hussain</span>
       </a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#home" data-page="home" class="active">Home</a></li>
         <li><a href="#about" data-page="about">About</a></li>
         <li><a href="#experience" data-page="experience">Experience</a></li>
         <li><a href="#projects" data-page="projects">Projects</a></li>
         <li><a href="#skills" data-page="skills">Skills</a></li>
         <li><a href="#certifications" data-page="certifications">Certifications</a></li>
-        <li><a href="#services" data-page="services">Services</a></li>
+        <li><a href="#services" data-page="services">Zorvexa</a></li>
         <li><a href="#contact" data-page="contact">Contact</a></li>
       </ul>
-      <div class="nav__right">
-        <a href="#contact" data-page="contact" class="btn btn--primary btn--sm nav__cta">Get in Touch</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+
     </div>
   </nav>
 
   <!-- Page Container -->
   <div id="app">
 
-    <!-- ═══ HOME PAGE ═══ -->
-    <div class="page active" id="page-home">
-      <section class="hero">
-        <canvas class="hero__canvas" id="heroCanvas"></canvas>
-        <div class="hero__gradient"></div>
-        <div class="hero__content">
-          <div class="hero__top">
-            <div class="hero__text">
-              <div class="hero__badge" id="heroBadge">
-                <span class="hero__badge-dot"></span>
-                <span>Available for opportunities</span>
-              </div>
-              <h1 class="hero__name" id="heroName"></h1>
-              <div class="hero__typed-wrap">
-                <span class="hero__typed-prefix">I'm a</span>
-                <span class="hero__typed" id="heroTyped"></span>
-                <span class="hero__cursor">|</span>
-              </div>
-              <p class="hero__bio" id="heroBio"></p>
-              <div class="hero__actions">
-                <a href="#projects" data-page="projects" class="btn btn--primary">
-                  <span>View Projects</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                </a>
-                <a href="#contact" data-page="contact" class="btn btn--outline">Get in Touch</a>
-                <a href="" class="btn btn--outline" id="heroCvBtn" style="display:none;">Download CV</a>
-              </div>
-              <div class="hero__tags" id="heroTags"></div>
-            </div>
-            <div class="hero__avatar-wrap" id="heroAvatarWrap" style="display:none;">
-              <div class="hero__avatar">
-                <img id="heroAvatarImg" alt="Muhammad Hussain" src="">
-                <div class="hero__avatar-ring"></div>
-              </div>
-            </div>
-          </div>
-          <div class="hero__stats" id="heroStats"></div>
-        </div>
-        <div class="hero__scroll">
-          <span>Explore my work</span>
-          <div class="hero__scroll-line"></div>
-        </div>
-      </section>
-    </div>
-
     <!-- ═══ ABOUT PAGE ═══ -->
-    <div class="page" id="page-about">
+    <div class="page active" id="page-about">
       <section class="page-section">
         <div class="container">
           <div class="page-hero">
-            <span class="section-label">About Me</span>
+            <span class="section-label">Muhammad Hussain · Database & Software Engineer</span>
             <h1 class="page-title">Turning Data Into<br>Software That <span class="gradient-text">Works</span></h1>
             <p class="page-subtitle">Software engineering student and database developer building practical solutions for real-world problems.</p>
           </div>
@@ -105,7 +54,7 @@
             </div>
             <div class="about__content">
               <p class="about__bio" id="aboutBio"></p>
-              <div class="about__info-grid" id="aboutCards"></div>
+              <div class="about__info-grid" id="aboutCards"></div><div class="about-actions"><a href="#contact" data-page="contact" class="btn btn--primary">Get in Touch ↗</a><a href="#projects" data-page="projects" class="btn btn--outline">Explore Projects</a></div>
             </div>
           </div>
         </div>
@@ -202,7 +151,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
             </a>
           </div>
-          <div class="services-grid" id="servicesGrid"></div>
+          <div class="zorvexa-story"><article><span class="section-label">Who we are</span><h2 id="zorvexaName">Zorvexa</h2><p id="zorvexaIntro"></p></article><article><span class="section-label">Our mission</span><p id="zorvexaMission"></p></article></div><div class="services-grid" id="servicesGrid"></div>
         </div>
       </section>
     </div>
@@ -218,27 +167,28 @@
           </div>
           <div class="contact">
             <div class="contact__info" id="contactInfo"></div>
-            <form class="contact__form" id="contactForm">
+            <form class="contact__form" id="contactForm"><div class="form-heading"><span class="section-label">Start a conversation</span><h2>Tell me about your project.</h2></div><div class="form-trap" aria-hidden="true"><label for="cfWebsite">Leave empty</label><input id="cfWebsite" name="website" tabindex="-1" autocomplete="off"></div>
               <div class="form-group">
-                <input type="text" name="name" id="cfName" required placeholder=" ">
+                <input type="text" name="name" id="cfName" autocomplete="name" maxlength="100" required placeholder=" ">
                 <label for="cfName">Your Name</label>
               </div>
               <div class="form-group">
-                <input type="email" name="email" id="cfEmail" required placeholder=" ">
+                <input type="email" name="email" id="cfEmail" autocomplete="email" maxlength="254" required placeholder=" ">
                 <label for="cfEmail">Your Email</label>
               </div>
               <div class="form-group form-group--full">
-                <input type="text" name="subject" id="cfSubject" placeholder=" ">
+                <input type="text" name="subject" id="cfSubject" maxlength="160" placeholder=" ">
                 <label for="cfSubject">Subject</label>
               </div>
               <div class="form-group form-group--full">
-                <textarea name="message" id="cfMessage" required placeholder=" " rows="5"></textarea>
+                <textarea name="message" id="cfMessage" maxlength="5000" required placeholder=" " rows="5"></textarea>
                 <label for="cfMessage">Your Message</label>
               </div>
               <button type="submit" class="btn btn--primary btn--full">
                 <span>Send Message</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
               </button>
+              <p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -248,11 +198,11 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" hidden>
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <a href="#home" data-page="home" class="nav__logo">
+          <a href="#about" data-page="about" class="nav__logo">
             <span class="nav__logo-icon">MH</span>
             <span class="nav__logo-text">Hussain</span>
           </a>
@@ -283,3 +233,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+

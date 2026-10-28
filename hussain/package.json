@@ -1,6 +1,13 @@
 {
   "name": "hussain-portfolio",
   "version": "1.0.0",
-  "description": "Muhammad Hussain — Database & Software Developer Portfolio",
-  "private": true
+  "description": "Muhammad Hussain \u2014 Database & Software Developer Portfolio",
+  "private": true,
+  "scripts": {
+    "test": "node tests/contact.cjs",
+    "check": "node --check js/main.js && node --check admin/admin.js && node --check api/contact.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
 }
