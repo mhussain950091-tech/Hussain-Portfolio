@@ -389,3 +389,9 @@ body {
   .admin-form { grid-template-columns: 1fr; }
   .item-card { flex-direction: column; }
 }
+
+
+:root { --bg-primary:#071722; --bg-secondary:#0b2230; --bg-card:#102c3a; --bg-card-hover:#173d49; --text-primary:#f1f5ed; --text-secondary:#b2c6cc; --text-muted:#8faab4; --accent:#57cbb0; --accent-light:#a1f0d9; --border:#294954; --border-light:#42616a; }
+.panel-note { color:var(--text-secondary); margin:12px 0 24px; max-width:680px; }
+.admin-form input,.admin-form textarea { min-width:0; }
+@media(max-width:600px) { .admin-form { grid-template-columns:1fr; } .dash-nav { display:flex; flex-wrap:nowrap; overflow-x:auto; } .dash-nav__tab { flex-shrink:0; } .form-group input,.form-group textarea { font-size:16px; } }

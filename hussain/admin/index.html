@@ -312,8 +312,10 @@
 
       <!-- Zorvexa Tab -->
       <section class="dash-panel" id="panel-zorvexa">
-        <h2>Zorvexa</h2>
+        <h2>Zorvexa</h2><p class="panel-note">Edit your company story and services. Save your draft, then export JSON and update data/portfolio-data.json to publish.</p>
         <form id="zorvexaForm" class="admin-form">
+          <div class="form-group full-width"><label for="zv-introduction">Company introduction</label><textarea id="zv-introduction" rows="5" maxlength="3000"></textarea></div>
+          <div class="form-group full-width"><label for="zv-mission">Mission</label><textarea id="zv-mission" rows="3" maxlength="1500"></textarea></div>
           <div class="form-group">
             <label>Company Name</label>
             <input type="text" name="name" id="zv-name">
@@ -346,3 +348,4 @@
   <script src="admin.js"></script>
 </body>
 </html>
+
