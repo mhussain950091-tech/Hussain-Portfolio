@@ -10,7 +10,7 @@
     "linkedin": "https://www.linkedin.com/in/muhammad-hussain-478731340/",
     "fiverr": "https://www.fiverr.com/m_hussain_123",
     "zorvexa_linkedin": "https://www.linkedin.com/company/zorvexa-data/",
-    "bio": "I’m Muhammad Hussain, a Database Engineer and the founder of ZorVexa-Data. I help businesses and teams turn raw, scattered data into reliable, well-structured systems, from database design and migration to dashboards and AI-powered tools.\n\nMy core expertise is in PostgreSQL, MySQL, SQL Server, and MongoDB, backed by T-SQL, Java, and Python, and I am Microsoft SQL certified. Since 2024, I have delivered database solutions for clients on Upwork and Fiverr, working on schema design, relational data modeling, and the logic that keeps data accurate and consistent. I have also handled database migrations, including moving a database from MySQL to PostgreSQL.\n\nAlongside client work, I build and lead full products where the database is the foundation. I led a five-person team to build NovaSight, an AI-powered platform that converts raw CSV files into interactive dashboards. I led the database workflow of Synthora AI, a synthetic data platform developed at the HackDataV2 hackathon, covering primary and foreign key relationships and the flow of tabular, relational, and document data. I have also built a Point of Sale system for a client, and I am currently developing SmartlyPOS, an AI voice-controlled POS system for retail stores.\n\nThrough ZorVexa-Data, I work on data engineering, AI intelligence, and scalable technology, helping organizations build data systems they can trust and grow with. My approach is simple: a strong database makes everything built on top of it faster, cleaner, and easier to maintain.\n\n",
+    "bio": "Behind every great digital experience is a system built well. That’s where I focus.n/nI’m Muhammad Hussain, a software engineer, backend developer, and founder of Zorvexa. I build the systems behind applications—from databases that keep information organized to backend services that turn complex requirements into practical features.n/nWorking with SQL, Python, Java, and modern database technologies, I enjoy connecting data, logic, and software to solve real problems. My interests extend into data engineering and AI-powered applications, with a consistent goal: creating technology that is useful, dependable, and thoughtfully built.\n\n",
     "profileImage": "https://res.cloudinary.com/wzyad20a/image/upload/v1793115551/MY_professional_picture.png"
   },
   "projects": [
@@ -77,7 +77,7 @@
     },
     {
       "id": "sarina-hotel",
-      "title": "Sarina Hotel Management System",
+      "title": "Hotel Management System",
       "tagline": "Hotel Operations & Records Platform",
       "description": "The Hotel Management System is a database-driven application that manages the daily operations of a hotel in one place. It replaces manual registers and scattered records with a structured system for guest registration, room allocation, bookings, check-in and check-out, and billing.\n\nThe system keeps room availability up to date, prevents double bookings, and stores every guest record and transaction in a relational database. This gives hotel staff accurate information and reduces errors in daily work.\n\nMy role: I worked on the project as part of a team, contributing to the database design and the system’s core logic, including the relationships between guests, rooms, bookings, and billing.",
       "role": "Junior Developer",
@@ -192,7 +192,7 @@
       "issuer": "SimpliLearn",
       "date": "Feb 2026",
       "description": "Developed a foundational understanding of prompt engineering and the role of clear instructions in guiding generative AI responses. Strengthened the ability to communicate task requirements effectively when using AI tools for learning, content creation, and software development support.",
-      "image": ""
+      "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793215972/Capture_d_écran_2026-10-29_003231.png"
     },
     {
       "title": "Get Started with SQL Analytics and BI on Databricks",
