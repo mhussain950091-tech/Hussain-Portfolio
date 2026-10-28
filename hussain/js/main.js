@@ -207,7 +207,7 @@
     if (!cards) return;
     var items = [
       { icon: Icons.location, label: 'Location', value: p.location || '—' },
-      { icon: Icons.briefcase, label: 'Experience', value: (data.experience || []).length + '+ Roles' },
+      { icon: Icons.code, label: 'Projects', value: (data.projects || []).length + ' Projects Built' },
       { icon: Icons.graduation, label: 'Education', value: 'BSSE @ COMSATS' }
     ];
     cards.innerHTML = items.map(function (c) {
