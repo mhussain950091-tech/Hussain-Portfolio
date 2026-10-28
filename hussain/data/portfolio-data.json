@@ -236,11 +236,6 @@
       "role": "Founder & CEO",
       "org": "Zorvexa",
       "description": "Building a software company focused on databases, development, and AI solutions"
-    },
-    {
-      "role": "Badminton Captain",
-      "org": "College Team",
-      "description": "College captain, district Talagang silver medal"
     }
   ],
   "zorvexa": {
@@ -256,6 +251,6 @@
     ],
     "linkedin": "https://www.linkedin.com/company/zorvexa-data/",
     "introduction": "Zorvexa is founded by Muhammad Hussain to help businesses turn scattered data into dependable software. We bring together database design, business applications, analytics dashboards, and AI-enabled tools to solve practical operational problems.",
-    "mission": "Build reliable data foundations and purposeful software that help businesses work clearly, make informed decisions, and grow with confidence."
+    "mission": "Your ideas deserve a strong technical foundation.Zorvexa brings together database solutions, custom software development, and AI automation to help businesses turn everyday challenges into better ways of working.From organizing business data and developing web and desktop applications to building AI agents and insightful dashboards, we focus on solutions shaped around how your business operates. Our approach starts with understanding the problem, choosing the right technology, and building with clarity and purpose.n/nFounded by Muhammad Hussain, Zorvexa is driven by a simple belief: technology should make your next step easier."
   }
 }
