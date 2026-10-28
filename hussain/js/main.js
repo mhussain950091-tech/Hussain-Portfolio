@@ -1,5 +1,6 @@
 /* ══════════════════════════════════════════════════
    Muhammad Hussain Portfolio — Professional Engine
+   Multi-page hash routing + enhanced interactions
    ══════════════════════════════════════════════════ */
 
 (function () {
@@ -8,6 +9,7 @@
   /* ── Constants ── */
   var DATA_URL = 'data/portfolio-data.json';
   var LS_KEY  = 'hussain_portfolio_data';
+  var PAGES = ['home', 'about', 'experience', 'projects', 'skills', 'certifications', 'services', 'contact'];
 
   /* ── SVG Icon Library ── */
   var Icons = {
@@ -41,6 +43,7 @@
 
   /* ── Utility Helpers ── */
   function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function setText(id, text) { var el = document.getElementById(id); if (el && text) el.textContent = text; }
 
   /* ── Data Loading ── */
   function loadData() {
@@ -50,6 +53,120 @@
         try { var ls = localStorage.getItem(LS_KEY); if (ls) return JSON.parse(ls); } catch (e) {}
         return null;
       });
+  }
+
+  /* ═══════ PAGE ROUTER ═══════ */
+
+  var currentPage = 'home';
+
+  function getPageFromHash() {
+    var hash = window.location.hash.replace('#', '') || 'home';
+    return PAGES.indexOf(hash) !== -1 ? hash : 'home';
+  }
+
+  function navigateTo(pageName) {
+    if (PAGES.indexOf(pageName) === -1) pageName = 'home';
+    if (pageName === currentPage) return;
+
+    // Hide all pages
+    var allPages = document.querySelectorAll('.page');
+    allPages.forEach(function (p) { p.classList.remove('active'); });
+
+    // Show target page
+    var target = document.getElementById('page-' + pageName);
+    if (target) {
+      target.classList.add('active');
+      // Re-trigger page entrance animation
+      target.style.animation = 'none';
+      target.offsetHeight; // force reflow
+      target.style.animation = '';
+    }
+
+    // Update nav links
+    document.querySelectorAll('.nav__links a').forEach(function (link) {
+      link.classList.toggle('active', link.getAttribute('data-page') === pageName);
+    });
+
+    // Update hash without triggering hashchange again
+    if (window.location.hash !== '#' + pageName) {
+      history.pushState(null, '', '#' + pageName);
+    }
+
+    currentPage = pageName;
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Re-trigger animations on the active page
+    triggerPageAnimations(pageName);
+
+    // Close mobile nav if open
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.classList.remove('active');
+      links.classList.remove('active');
+    }
+  }
+
+  function triggerPageAnimations(pageName) {
+    var page = document.getElementById('page-' + pageName);
+    if (!page) return;
+
+    // Reveal cards with stagger
+    var revealEls = page.querySelectorAll('.card-reveal, .reveal');
+    revealEls.forEach(function (el, i) {
+      el.classList.remove('visible');
+      el.style.transitionDelay = (i * 0.06) + 's';
+      setTimeout(function () {
+        el.classList.add('visible');
+      }, 60);
+    });
+
+    // Re-trigger counter animations on home page
+    if (pageName === 'home') {
+      page.querySelectorAll('.counter').forEach(function (c) {
+        c.dataset.animated = '';
+        c.textContent = '0';
+      });
+      initCounterAnimation();
+    }
+
+    // Re-trigger skill bars on skills page
+    if (pageName === 'skills') {
+      page.querySelectorAll('.skill-bar__fill').forEach(function (b) {
+        b.dataset.animated = '';
+        b.style.width = '0%';
+      });
+      setTimeout(function () { initSkillBarAnimation(); }, 100);
+    }
+  }
+
+  function initRouter() {
+    // Listen for hash changes (back/forward buttons)
+    window.addEventListener('hashchange', function () {
+      navigateTo(getPageFromHash());
+    });
+
+    // Handle popstate for browser back/forward
+    window.addEventListener('popstate', function () {
+      navigateTo(getPageFromHash());
+    });
+
+    // Intercept all clicks on [data-page] links
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('[data-page]');
+      if (link) {
+        e.preventDefault();
+        var page = link.getAttribute('data-page');
+        navigateTo(page);
+      }
+    });
+
+    // Navigate to initial page from URL hash
+    var initial = getPageFromHash();
+    currentPage = ''; // force navigation
+    navigateTo(initial);
   }
 
   /* ── Main Init ── */
@@ -68,13 +185,13 @@
     initNavigation();
     initHeroCanvas();
     initTypingAnimation(data);
-    initScrollReveal();
     initCounterAnimation();
     initSkillBarAnimation();
     initLightbox();
     initContactForm();
     initProjectFilters();
     initExperienceTabs();
+    initRouter();
   }
 
   /* ═══════ RENDERERS ═══════ */
@@ -386,7 +503,7 @@
 
   /* ═══════ INTERACTIVITY ═══════ */
 
-  /* ── Navigation ── */
+  /* ── Navigation (scroll effects + mobile toggle) ── */
   function initNavigation() {
     var nav = document.getElementById('nav');
     var toggle = document.getElementById('navToggle');
@@ -394,7 +511,6 @@
 
     window.addEventListener('scroll', function () {
       if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
-      highlightActiveLink();
     });
 
     if (toggle && links) {
@@ -402,31 +518,7 @@
         toggle.classList.toggle('active');
         links.classList.toggle('active');
       });
-      links.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') {
-          toggle.classList.remove('active');
-          links.classList.remove('active');
-        }
-      });
     }
-  }
-
-  function highlightActiveLink() {
-    var sections = document.querySelectorAll('section[id]');
-    var scrollPos = window.scrollY + 120;
-    sections.forEach(function (sec) {
-      var top = sec.offsetTop;
-      var height = sec.offsetHeight;
-      var id = sec.getAttribute('id');
-      var link = document.querySelector('.nav__links a[href="#' + id + '"]');
-      if (link) {
-        if (scrollPos >= top && scrollPos < top + height) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      }
-    });
   }
 
   /* ── Hero Canvas Animation ── */
@@ -436,7 +528,6 @@
     var ctx = canvas.getContext('2d');
     var particles = [];
     var mouse = { x: -999, y: -999 };
-    var raf;
 
     function resize() {
       canvas.width = canvas.offsetWidth;
@@ -475,7 +566,7 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 217, 255, 0.35)';
+        ctx.fillStyle = 'rgba(129, 140, 248, 0.3)';
         ctx.fill();
       });
 
@@ -488,7 +579,7 @@
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = 'rgba(0, 217, 255, ' + (0.06 * (1 - dist / 120)) + ')';
+            ctx.strokeStyle = 'rgba(129, 140, 248, ' + (0.06 * (1 - dist / 120)) + ')';
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -501,13 +592,13 @@
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = 'rgba(0, 217, 255, ' + (0.15 * (1 - mDist / 150)) + ')';
+          ctx.strokeStyle = 'rgba(129, 140, 248, ' + (0.15 * (1 - mDist / 150)) + ')';
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
       }
 
-      raf = requestAnimationFrame(draw);
+      requestAnimationFrame(draw);
     }
     draw();
   }
@@ -548,21 +639,6 @@
       }
     }
     setTimeout(tick, 800);
-  }
-
-  /* ── Scroll Reveal ── */
-  function initScrollReveal() {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.reveal, .card-reveal').forEach(function (el) {
-      observer.observe(el);
-    });
   }
 
   /* ── Counter Animation ── */
@@ -641,18 +717,12 @@
 
     function closeLightbox() {
       lb.classList.remove('active');
-      setTimeout(function () {
-        lbContent.innerHTML = '';
-      }, 300);
+      setTimeout(function () { lbContent.innerHTML = ''; }, 300);
     }
 
     if (lbClose) lbClose.addEventListener('click', closeLightbox);
-    lb.addEventListener('click', function (e) {
-      if (e.target === lb) closeLightbox();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeLightbox();
-    });
+    lb.addEventListener('click', function (e) { if (e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
   }
 
   /* ── Contact Form ── */
@@ -710,20 +780,15 @@
         panels.forEach(function (p) { p.classList.remove('active'); });
         tab.classList.add('active');
         var target = document.getElementById('panel-' + tab.dataset.tab);
-        if (target) target.classList.add('active');
-
-        // Re-trigger reveal for newly visible cards
-        target.querySelectorAll('.card-reveal:not(.visible)').forEach(function (el) {
-          el.classList.add('visible');
-        });
+        if (target) {
+          target.classList.add('active');
+          // Re-trigger reveal for newly visible cards
+          target.querySelectorAll('.card-reveal:not(.visible)').forEach(function (el) {
+            el.classList.add('visible');
+          });
+        }
       });
     });
-  }
-
-  /* ── Helper ── */
-  function setText(id, text) {
-    var el = document.getElementById(id);
-    if (el && text) el.textContent = text;
   }
 
   /* ═══════ BOOTSTRAP ═══════ */
