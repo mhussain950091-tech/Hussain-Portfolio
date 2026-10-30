@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel — Hussain Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="admin.css">
 </head>
 <body>
@@ -15,9 +16,9 @@
   <div class="login-screen" id="loginScreen">
     <div class="login-card">
       <h1 class="login-card__title">Admin Panel</h1>
-      <p class="login-card__subtitle">Muhammad Hussain Portfolio</p>
+      <p class="login-card__subtitle">Muhammad Hussain Portfolio</p><p class="panel-note">This editor saves drafts in this browser. Export your changes to publish them.</p>
       <form id="loginForm">
-        <input type="password" id="loginPassword" placeholder="Enter admin password" required autocomplete="current-password">
+        <label for="loginPassword">Editor password</label><input type="password" id="loginPassword" placeholder="Enter admin password" required autocomplete="current-password">
         <button type="submit" class="btn btn--primary">Login</button>
         <p class="login-card__error" id="loginError"></p>
       </form>
@@ -43,7 +44,7 @@
         <li>Upload images/videos to <a href="https://cloudinary.com" target="_blank">Cloudinary</a> and paste the URLs below</li>
         <li>Click <strong>"Export JSON"</strong> to download <code>portfolio-data.json</code></li>
         <li>Replace <code>data/portfolio-data.json</code> in your GitHub repo with the downloaded file</li>
-        <li>Vercel will auto-deploy — everyone sees your changes!</li>
+        <li>Vercel runs npm run build, then publishes your changes for everyone.</li>
       </ol>
       <button class="btn btn--sm btn--outline" id="closeBanner">Got it</button>
     </div>
@@ -52,7 +53,7 @@
       <button class="dash-nav__tab active" data-tab="profile">Profile</button>
       <button class="dash-nav__tab" data-tab="projects">Projects</button>
       <button class="dash-nav__tab" data-tab="skills">Skills</button>
-      <button class="dash-nav__tab" data-tab="journey">Journey</button>
+      <button class="dash-nav__tab" data-tab="experience">Experience</button><button class="dash-nav__tab" data-tab="education">Education</button><button class="dash-nav__tab" data-tab="journey">Journey</button>
       <button class="dash-nav__tab" data-tab="leadership">Leadership</button>
       <button class="dash-nav__tab" data-tab="certifications">Certifications</button>
       <button class="dash-nav__tab" data-tab="zorvexa">Zorvexa</button>
@@ -73,8 +74,8 @@
             <input type="text" name="name" id="pf-name">
           </div>
           <div class="form-group">
-            <label>Title</label>
-            <input type="text" name="title" id="pf-title">
+            <label for="pf-title">Professional title</label>
+            <input type="text" name="title" id="pf-title" readonly><small>Shared title: edit professionalTitle in site.config.json.</small>
           </div>
           <div class="form-group">
             <label>Subtitle</label>
@@ -126,8 +127,10 @@
               <h3 id="projectModalTitle">Add Project</h3>
               <button class="modal__close" id="projectModalClose">&times;</button>
             </div>
-            <form id="projectForm" class="admin-form">
-              <input type="hidden" name="id" id="proj-id">
+            <form id="projectForm" class="admin-form"><div class="form-group"><label for="proj-category">Project category</label><select id="proj-category"><option value="business">Business software</option><option value="ai">AI & data</option><option value="web">Web development</option><option value="other">Other</option></select></div>
+              <input type="hidden" name="id" id="proj-id"><div class="form-group full-width"><label for="proj-problem">Problem solved (one line)</label><input id="proj-problem" required maxlength="300"></div>
+              <div class="form-group full-width"><label for="proj-built">What I built (one or two sentences)</label><textarea id="proj-built" rows="3" required></textarea></div>
+              <div class="form-group full-width"><label for="proj-impact">Result / impact</label><input id="proj-impact" placeholder="Outcome; [add metric] if a number is not available" required></div>
               <div class="form-group">
                 <label>Title</label>
                 <input type="text" name="title" id="proj-title" required>
@@ -339,10 +342,12 @@
           <button type="submit" class="btn btn--primary">Save Zorvexa Info</button>
         </form>
       </section>
+      <section class="dash-panel" id="panel-experience"><h2>Work experience & memberships</h2><p class="panel-note">Add internships, employment, freelance roles, volunteer work and memberships. Save your draft, then export JSON to publish.</p><div id="experienceEditor"></div></section>
+      <section class="dash-panel" id="panel-education"><h2>Education</h2><p class="panel-note">Add universities, schools, degrees, exchange programmes and courses. Enter the institution, qualification and dates exactly as you want them displayed.</p><div id="educationEditor"></div></section>
     </main>
 
     <!-- Toast -->
-    <div class="toast" id="toast"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </div>
 
   <script src="admin.js"></script>

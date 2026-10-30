@@ -1,236 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Hussain — Database & Software Developer</title>
-  <meta name="description" content="Portfolio of Muhammad Hussain — Database & Software Developer, Founder of Zorvexa, Software Engineering student at COMSATS University Islamabad.">
-  <meta name="theme-color" content="#081c29">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified</title>
+<meta name="description" content="Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified. Database systems, SQL projects, and founder of Zorvexa.">
+<meta name="theme-color" content="#FFFFFF">
+<!-- Generated from site.config.json: change siteUrl there, then npm run build. -->
+<link rel="canonical" href="https://muhammadhussain.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Muhammad Hussain">
+<meta property="og:title" content="Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified">
+<meta property="og:description" content="Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified. Database systems, SQL projects, and founder of Zorvexa.">
+<meta property="og:url" content="https://muhammadhussain.vercel.app/">
+<meta property="og:image" content="https://muhammadhussain.vercel.app/assets/social-preview.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Muhammad Hussain — Database Engineer. PostgreSQL, MySQL, SQL Server, MongoDB. Microsoft SQL Certified. Founder of Zorvexa.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified">
+<meta name="twitter:description" content="Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified. Database systems, SQL projects, and founder of Zorvexa.">
+<meta name="twitter:url" content="https://muhammadhussain.vercel.app/"><meta name="twitter:image" content="https://muhammadhussain.vercel.app/assets/social-preview.png">
+<meta name="twitter:image:alt" content="Muhammad Hussain — Database Engineer and founder of Zorvexa">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/main.js" defer></script>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#about" class="nav__logo">
-        <span class="nav__logo-icon">MH</span>
-        <span class="nav__logo-text">Hussain</span>
-      </a>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#about" data-page="about">About</a></li>
-        <li><a href="#experience" data-page="experience">Experience</a></li>
-        <li><a href="#projects" data-page="projects">Projects</a></li>
-        <li><a href="#skills" data-page="skills">Skills</a></li>
-        <li><a href="#certifications" data-page="certifications">Certifications</a></li>
-        <li><a href="#services" data-page="services">Zorvexa</a></li>
-        <li><a href="#contact" data-page="contact">Contact</a></li>
-      </ul>
-
-    </div>
-  </nav>
-
-  <!-- Page Container -->
-  <div id="app">
-
-    <!-- ═══ ABOUT PAGE ═══ -->
-    <div class="page active" id="page-about">
-      <section class="page-section">
-        <div class="container">
-          <div class="page-hero">
-            <span class="section-label">Muhammad Hussain · Database & Software Engineer</span>
-            <h1 class="page-title">Turning Data Into<br>Software That <span class="gradient-text">Works</span></h1>
-            <p class="page-subtitle">Software engineering student and database developer building practical solutions for real-world problems.</p>
-          </div>
-          <div class="about-layout">
-            <div class="about__photo-col" id="aboutPhotoCol" style="display:none;">
-              <div class="about__photo">
-                <img id="aboutPhotoImg" alt="Muhammad Hussain" src="">
-                <div class="about__photo-border"></div>
-              </div>
-            </div>
-            <div class="about__content">
-              <p class="about__bio" id="aboutBio"></p>
-              <div class="about__info-grid" id="aboutCards"></div><div class="about-actions"><a href="#contact" data-page="contact" class="btn btn--primary">Get in Touch ↗</a><a href="#projects" data-page="projects" class="btn btn--outline">Explore Projects</a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ EXPERIENCE PAGE ═══ -->
-    <div class="page" id="page-experience">
-      <section class="page-section">
-        <div class="container">
-          <div class="page-hero">
-            <span class="section-label">Career Path</span>
-            <h1 class="page-title">Experience &<br><span class="gradient-text">Education</span></h1>
-            <p class="page-subtitle">From foundational learning to building real-world software and leading teams.</p>
-          </div>
-          <div class="experience">
-            <div class="experience__tabs">
-              <button class="experience__tab active" data-tab="work">Work Experience</button>
-              <button class="experience__tab" data-tab="education">Education</button>
-              <button class="experience__tab" data-tab="timeline">Full Timeline</button>
-            </div>
-            <div class="experience__panel active" id="panel-work"></div>
-            <div class="experience__panel" id="panel-education"></div>
-            <div class="experience__panel" id="panel-timeline">
-              <div class="timeline" id="timeline"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ PROJECTS PAGE ═══ -->
-    <div class="page" id="page-projects">
-      <section class="page-section">
-        <div class="container">
-          <div class="page-hero">
-            <span class="section-label">Portfolio</span>
-            <h1 class="page-title">Featured<br><span class="gradient-text">Projects</span></h1>
-            <p class="page-subtitle">Real-world applications built with databases, backend logic, and clean architecture.</p>
-          </div>
-          <div class="projects__filters" id="projectFilters">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="featured">Featured</button>
-            <button class="filter-btn" data-filter="ai">AI-Powered</button>
-            <button class="filter-btn" data-filter="business">Business</button>
-          </div>
-          <div class="projects-grid" id="projectsGrid"></div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ SKILLS PAGE ═══ -->
-    <div class="page" id="page-skills">
-      <section class="page-section">
-        <div class="container">
-          <div class="page-hero">
-            <span class="section-label">Tech Stack</span>
-            <h1 class="page-title">Skills &<br><span class="gradient-text">Technologies</span></h1>
-            <p class="page-subtitle">Technologies and concepts I work with, grouped by domain — with proficiency levels.</p>
-          </div>
-          <div class="skills-grid" id="skillsGrid"></div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ CERTIFICATIONS PAGE ═══ -->
-    <div class="page" id="page-certifications">
-      <section class="page-section">
-        <div class="container">
-          <div class="page-hero">
-            <span class="section-label">Credentials</span>
-            <h1 class="page-title">Certifications &<br><span class="gradient-text">Achievements</span></h1>
-            <p class="page-subtitle">Validated skills from internships, courses, and competitions.</p>
-          </div>
-          <div class="cert-grid" id="certGrid"></div>
-          <div class="achievements">
-            <h3 class="achievements__title">Leadership & Achievements</h3>
-            <div class="achievements-grid" id="achievementsGrid"></div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ SERVICES PAGE ═══ -->
-    <div class="page" id="page-services">
-      <section class="page-section">
-        <div class="container">
-          <div class="page-hero">
-            <span class="section-label">Zorvexa</span>
-            <h1 class="page-title">What I Can<br><span class="gradient-text">Build For You</span></h1>
-            <p class="page-subtitle" id="zorvexaDesc"></p>
-            <a href="" target="_blank" rel="noopener" class="btn btn--primary" id="zorvexaLink" style="display:none;margin-top:24px;">
-              <span>View on LinkedIn</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
-            </a>
-          </div>
-          <div class="zorvexa-story"><article><span class="section-label">Who we are</span><h2 id="zorvexaName">Zorvexa</h2><p id="zorvexaIntro"></p></article><article><span class="section-label">Our mission</span><p id="zorvexaMission"></p></article></div><div class="services-grid" id="servicesGrid"></div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ CONTACT PAGE ═══ -->
-    <div class="page" id="page-contact">
-      <section class="page-section">
-        <div class="container">
-          <div class="page-hero">
-            <span class="section-label">Let's Connect</span>
-            <h1 class="page-title">Get in<br><span class="gradient-text">Touch</span></h1>
-            <p class="page-subtitle">Open for freelance work, collaborations, and opportunities. Let's build something together.</p>
-          </div>
-          <div class="contact">
-            <div class="contact__info" id="contactInfo"></div>
-            <form class="contact__form" id="contactForm"><div class="form-heading"><span class="section-label">Start a conversation</span><h2>Tell me about your project.</h2></div><div class="form-trap" aria-hidden="true"><label for="cfWebsite">Leave empty</label><input id="cfWebsite" name="website" tabindex="-1" autocomplete="off"></div>
-              <div class="form-group">
-                <input type="text" name="name" id="cfName" autocomplete="name" maxlength="100" required placeholder=" ">
-                <label for="cfName">Your Name</label>
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" id="cfEmail" autocomplete="email" maxlength="254" required placeholder=" ">
-                <label for="cfEmail">Your Email</label>
-              </div>
-              <div class="form-group form-group--full">
-                <input type="text" name="subject" id="cfSubject" maxlength="160" placeholder=" ">
-                <label for="cfSubject">Subject</label>
-              </div>
-              <div class="form-group form-group--full">
-                <textarea name="message" id="cfMessage" maxlength="5000" required placeholder=" " rows="5"></textarea>
-                <label for="cfMessage">Your Message</label>
-              </div>
-              <button type="submit" class="btn btn--primary btn--full">
-                <span>Send Message</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
-              </button>
-              <p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </div>
-
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer" hidden>
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <a href="#about" data-page="about" class="nav__logo">
-            <span class="nav__logo-icon">MH</span>
-            <span class="nav__logo-text">Hussain</span>
-          </a>
-          <p class="footer__tagline">Building database-driven software that solves real problems.</p>
-        </div>
-        <div class="footer__nav">
-          <h4>Navigation</h4>
-          <a href="#about" data-page="about">About</a>
-          <a href="#projects" data-page="projects">Projects</a>
-          <a href="#skills" data-page="skills">Skills</a>
-          <a href="#contact" data-page="contact">Contact</a>
-        </div>
-        <div class="footer__social" id="footerSocial"></div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; <span id="footerYear"></span> Muhammad Hussain. All rights reserved.</p>
-        <p>Built with purpose and passion.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox__close" id="lightboxClose">&times;</button>
-    <div class="lightbox__content" id="lightboxContent"></div>
-  </div>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
-
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-inner"><a class="brand" href="#about">Muhammad Hussain</a><nav aria-label="Main navigation"><ul><li><a href="#about" data-page="about">About</a></li><li><a href="#experience" data-page="experience">Experience</a></li><li><a href="#projects" data-page="projects">Projects</a></li><li><a href="#skills" data-page="skills">Skills</a></li><li><a href="#certifications" data-page="certifications">Certifications</a></li><li><a href="#services" data-page="services">Zorvexa</a></li><li><a href="#contact" data-page="contact">Contact</a></li></ul></nav></div></header>
+<main class="container" id="main"><section class="page" id="about" aria-label="About"><div class="about-hero"><div><header class="page-heading"><p class="eyebrow">Muhammad Hussain</p><h1 tabindex="-1">I design, optimize, and secure databases your business can rely on.</h1><p class="lead">I build dependable data foundations for business applications, analytics, and AI-powered tools.</p></header><p class="professional-title">Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified</p><div class="actions"><a class="btn primary" href="#contact">Get in Touch</a><a class="btn" href="/resume.pdf" download>Download CV</a></div><div class="social-links"><a class="" href="https://github.com/mhussain950091-tech" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5C19 15 21 13 21 9a6 6 0 0 0-1.5-4 5 5 0 0 0-.1-4S17 1 15 3a15 15 0 0 0-6 0C7 1 4.6 1 4.6 1a5 5 0 0 0-.1 4A6 6 0 0 0 3 9c0 4 2 6 6.5 6.5C9 16 9 17 9 18v4"/></svg>GitHub</a><a class="" href="https://www.linkedin.com/in/muhammad-hussain-478731340/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.01M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg>LinkedIn</a><a class="" href="mailto:mhussain950091@gmail.com"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a></div></div><figure class="portrait"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_560,c_limit/v1793115551/MY_professional_picture.png" width="448" height="560" alt="Portrait of Muhammad Hussain, Database Engineer" fetchpriority="high" decoding="async"><figcaption>Database Engineer · Founder of Zorvexa</figcaption></figure></div><div class="about-story"><h2>How I work</h2><div><p>I’m Muhammad Hussain, a Database Engineer and the founder of Zorvexa. I build reliable data foundations for business applications, analytics dashboards, and AI-powered tools.</p>
+<p>I work with PostgreSQL, MySQL, SQL Server, and MongoDB, backed by SQL, T-SQL, Python, and Java. My work connects clear schema design, consistent data relationships, and practical application requirements.</p>
+<p>From relational database workflows in Synthora AI to dashboards in NovaSight and Java business applications, I focus on systems that are useful, dependable, and straightforward to maintain.</p></div></div><div class="facts"><div><strong>4</strong><span>Selected projects</span></div><div><strong>Data → Systems</strong><span>My focus</span></div><div><strong>Islamabad , Pakistan</strong><span>Location</span></div></div></section>
+<section class="page" id="experience" aria-label="Experience"><header class="page-heading"><p class="eyebrow">My work</p><h1 tabindex="-1">Experience &amp; memberships</h1><p class="lead">The roles, projects, and teams I have contributed to.</p></header><div class="entries"><article class="entry"><div class="entry-meta">2026–Present · Employment</div><h3>Founder &amp; CEO</h3><p class="organisation">Zorvexa</p><p>I build database solutions, business applications and data tools through Zorvexa.</p><ul class="chips"><li>Database engineering</li><li>Business applications</li></ul></article><article class="entry"><div class="entry-meta">2025 · Internship</div><h3>Java Programming Intern</h3><p class="organisation">CodeAlpha</p><p>I completed a virtual internship in Java programming and contributed to a database-driven hotel management application.</p><ul class="chips"><li>Java Swing</li><li>MySQL</li><li>JDBC</li></ul></article></div><h2 class="subheading">Leadership & memberships</h2><div class="grid two"><article class="entry"><div class="entry-meta"></div><h3>Head of Events</h3><p class="organisation">COMSATS Heritage Society</p><p>Progressed from junior/executive responsibilities to events leadership</p><ul class="chips"></ul></article><article class="entry"><div class="entry-meta"></div><h3>Punjab Culture Head</h3><p class="organisation">COMSATS Heritage Society</p><p>Led cultural programming and event coordination</p><ul class="chips"></ul></article><article class="entry"><div class="entry-meta"></div><h3>Team Leader</h3><p class="organisation">Synthora AI — HackDataV2</p><p>Led three-member development team</p><ul class="chips"></ul></article><article class="entry"><div class="entry-meta"></div><h3>Founder &amp; CEO</h3><p class="organisation">Zorvexa</p><p>Building a software company focused on databases, development, and AI solutions</p><ul class="chips"></ul></article></div><div class="education" id="education"><h2>Education</h2><div class="entries"><article class="entry"><div class="entry-meta">2024–Present</div><h3>BS Software Engineering</h3><p class="organisation">COMSATS University Islamabad, Wah Campus</p><p>I am pursuing my degree in Software Engineering.</p><ul class="chips"></ul></article></div></div></section>
+<section class="page" id="projects" aria-label="Projects"><header class="page-heading"><p class="eyebrow">Selected work</p><h1 tabindex="-1">Projects built around real problems</h1><p class="lead">What I built, the data behind it, and the outcome.</p></header><div class="projects-toolbar" hidden><label for="projectFilter">Show</label><select id="projectFilter"><option value="all">All projects</option><option value="featured">Featured projects</option><option value="ai">AI &amp; data</option><option value="business">Business software</option></select><span id="projectCount" role="status" aria-live="polite"></span></div><div class="grid two" id="projectsGrid"><article class="project-card" data-category="ai" data-featured="true"><div class="project-cover"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_800,c_limit/v1793124110/Capture_d_%C3%A9cran_2026-10-27_230138.png" width="800" height="500" alt="Synthora AI project cover" loading="lazy" decoding="async"></div><div class="project-body"><p class="eyebrow">AI &amp; data</p><h2>Synthora AI</h2><p class="problem">Teams need realistic test data without exposing sensitive information.</p><p>I led the database workflow, designed PK–FK relationships, and integrated relational and document data flows into a deployed prototype.</p><ul class="chips"><li>Python</li><li>SQL validation</li><li>Database Design</li><li>Relational Modeling</li><li>Schema Validation</li><li>Vercel</li></ul><p class="impact"><strong>Impact</strong> Working hackathon prototype; [add metric: datasets generated or validation coverage].</p><details><summary>Read project details</summary><p>Synthora AI is a synthetic data generation platform developed during the HackDataV2 hackathon. Real-world datasets are often scarce, sensitive, or restricted by privacy requirements, which slows development, testing, and analytics. Synthora AI addresses this by generating realistic artificial data that preserves the structure and relationships of real datasets, without exposing confidential information.</p>
+<p>My Role</p>
+<p>As Team Lead, I directed the project from planning through delivery. I coordinated the team, assigned responsibilities, and kept the work aligned with the hackathon timeline. I also owned the platform’s entire database workflow.</p>
+<p>Key Contributions</p>
+<p>Database architecture: Designed the data model and controlled how data moves through the platform.
+Relational integrity: Defined primary key and foreign key (PK-FK) relationships so that generated data stays consistent and valid across linked tables.
+Multi-format data flow: Managed the flow of tabular, relational, and document-based data, so the platform can handle both structured and semi-structured data.
+Frontend delivery: Built the user interface and deployed it on Vercel, making the platform accessible through a live web application.
+Team coordination: Worked with the backend developer to integrate the database layer, backend services, and interface into a single working product.</p>
+<p>Technical Focus</p>
+<p>Database design, PK-FK relationship modeling, relational and document data handling, synthetic data generation, and web deployment (Vercel).</p>
+<p>Outcome</p>
+<p>Delivered a working, deployed prototype within the hackathon timeframe, demonstrating a practical approach to privacy-safe data generation.</p></details><div class="project-links"><a class="" href="https://github.com/mhussain950091-tech" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5C19 15 21 13 21 9a6 6 0 0 0-1.5-4 5 5 0 0 0-.1-4S17 1 15 3a15 15 0 0 0-6 0C7 1 4.6 1 4.6 1a5 5 0 0 0-.1 4A6 6 0 0 0 3 9c0 4 2 6 6.5 6.5C9 16 9 17 9 18v4"/></svg>GitHub profile</a><a class="" href="https://synthora-ai-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div></article>
+<article class="project-card" data-category="ai" data-featured="true"><div class="project-cover"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_800,c_limit/v1793124695/novasight_cover.jpg" width="800" height="500" alt="NovaSight project cover" loading="lazy" decoding="async"></div><div class="project-body"><p class="eyebrow">AI &amp; data</p><h2>NovaSight</h2><p class="problem">Raw CSV files are difficult to explore without manual analysis and charting.</p><p>I led a five-person team and contributed data and database design for an AI-assisted dashboard platform.</p><ul class="chips"><li>Python</li><li>Streamlit</li><li>pandas</li><li>NumPy</li><li>Plotly</li><li>PostgreSQL</li></ul><p class="impact"><strong>Impact</strong> Turned uploaded data into interactive dashboards; [add metric: time saved per report].</p><details><summary>Read project details</summary><p>NovaSight is an AI-powered dashboard creation platform that turns raw CSV data into interactive, presentation-ready dashboards in minutes. It removes the need for manual charting and BI tool expertise, so non-technical users can explore and understand their data on their own.</p>
+<p>My Role</p>
+<p>As Project Lead, I led a team of five, from planning and task distribution to integration and delivery. I also contributed to the platform’s data and database design.</p>
+<p>Key Features</p>
+<p>CSV to dashboard: Users upload a raw CSV file, and the platform builds a dashboard automatically.
+Smart chart recommendations: Suggests suitable chart types based on the structure and content of the data.
+KPI cards: Highlights key metrics at a glance.
+Interactive filters: Sidebar filters let users explore the data dynamically.
+Export: Dashboards and results can be exported for reporting and sharing.
+AI integration: Integrates the Anthropic Claude API and Gemini API to add intelligence to the analysis workflow.
+Synthetic Data module (in development): A schema-builder interface for generating tabular, relational, and document datasets.</p>
+<p>Technology Stack</p>
+<p>Python, Streamlit, MySQL, Plotly, Anthropic Claude API, Gemini API.</p>
+<p>Impact</p>
+<p>NovaSight makes data analysis accessible to people without technical or BI backgrounds, cutting the time from raw data to usable insight.</p></details><div class="project-links"><a class="" href="https://github.com/mhussain950091-tech" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5C19 15 21 13 21 9a6 6 0 0 0-1.5-4 5 5 0 0 0-.1-4S17 1 15 3a15 15 0 0 0-6 0C7 1 4.6 1 4.6 1a5 5 0 0 0-.1 4A6 6 0 0 0 3 9c0 4 2 6 6.5 6.5C9 16 9 17 9 18v4"/></svg>GitHub profile</a><span class="muted">Live demo: not available</span></div></div></article>
+<article class="project-card" data-category="business" data-featured="true"><div class="project-cover"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_800,c_limit/v1793124821/pos_client_cover.jpg" width="800" height="500" alt="Fast Food POS project cover" loading="lazy" decoding="async"></div><div class="project-body"><p class="eyebrow">Business software</p><h2>Fast Food POS</h2><p class="problem">A restaurant needed a consistent way to manage billing, products, and sales records.</p><p>I built a Java Swing application connected to MySQL for cart management, payments, inventory, and daily reporting.</p><ul class="chips"><li>Java Swing</li><li>JDBC</li><li>MySQL</li><li>Launch4j</li></ul><p class="impact"><strong>Impact</strong> Delivered a desktop POS for a business client; [add metric: daily orders processed].</p><details><summary>Read project details</summary><p>I built a Java Swing and MySQL point-of-sale application for a fast-food business, covering products, orders, payments and reporting. The earlier saved description referred to the separate SmartlyPOS project and is retained in sourceNotes for review.</p></details><div class="project-links"><a class="" href="https://github.com/mhussain950091-tech/personal-pos" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5C19 15 21 13 21 9a6 6 0 0 0-1.5-4 5 5 0 0 0-.1-4S17 1 15 3a15 15 0 0 0-6 0C7 1 4.6 1 4.6 1a5 5 0 0 0-.1 4A6 6 0 0 0 3 9c0 4 2 6 6.5 6.5C9 16 9 17 9 18v4"/></svg>GitHub repository</a><span class="muted">Live demo: not available</span></div></div></article>
+<article class="project-card" data-category="business" data-featured="true"><div class="project-cover"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_800,c_limit/v1793125146/hotel_management_gold_cover.jpg" width="800" height="500" alt="Hotel Management System project cover" loading="lazy" decoding="async"></div><div class="project-body"><p class="eyebrow">Business software</p><h2>Hotel Management System</h2><p class="problem">Hotel teams need connected records for guests, rooms, bookings, and billing.</p><p>I contributed relational database design and application logic for a Java Swing and MySQL hotel management system.</p><ul class="chips"><li>Java Swing</li><li>JDBC</li><li>MySQL</li></ul><p class="impact"><strong>Impact</strong> Centralized hotel records and booking workflows; [add metric: records managed or time saved].</p><details><summary>Read project details</summary><p>The Hotel Management System is a database-driven application that manages the daily operations of a hotel in one place. It replaces manual registers and scattered records with a structured system for guest registration, room allocation, bookings, check-in and check-out, and billing.</p>
+<p>The system keeps room availability up to date, prevents double bookings, and stores every guest record and transaction in a relational database. This gives hotel staff accurate information and reduces errors in daily work.</p>
+<p>My role: I worked on the project as part of a team, contributing to the database design and the system’s core logic, including the relationships between guests, rooms, bookings, and billing.</p></details><div class="project-links"><a class="" href="https://github.com/mhussain950091-tech/Code-alpha_hotel_management_system" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5C19 15 21 13 21 9a6 6 0 0 0-1.5-4 5 5 0 0 0-.1-4S17 1 15 3a15 15 0 0 0-6 0C7 1 4.6 1 4.6 1a5 5 0 0 0-.1 4A6 6 0 0 0 3 9c0 4 2 6 6.5 6.5C9 16 9 17 9 18v4"/></svg>GitHub repository</a><span class="muted">Live demo: not available</span></div></div></article></div></section>
+<section class="page" id="skills" aria-label="Skills"><header class="page-heading"><p class="eyebrow">My toolkit</p><h1 tabindex="-1">Skills I use in practice</h1><p class="lead">Technologies and techniques behind my database and application work.</p></header><div class="grid two"><article class="card"><h2>Databases</h2><ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li><li>MongoDB</li></ul></article><article class="card"><h2>Languages</h2><ul class="chips"><li>SQL</li><li>T-SQL</li><li>Python</li><li>Java</li><li>C++</li><li>JavaScript</li></ul></article><article class="card"><h2>Database Engineering</h2><ul class="chips"><li>Schema Design</li><li>Relational Modeling</li><li>Primary &amp; Foreign Keys</li><li>Data Integrity</li><li>SQL Validation</li><li>Database Migration</li><li>ER Diagrams</li><li>Normalization</li></ul></article><article class="card"><h2>Data &amp; Applications</h2><ul class="chips"><li>pandas</li><li>NumPy</li><li>Streamlit</li><li>Plotly</li><li>Java Swing</li><li>JDBC</li><li>HTML</li><li>CSS</li></ul></article><article class="card"><h2>Tools</h2><ul class="chips"><li>Git</li><li>GitHub</li><li>Vercel</li><li>Launch4j</li></ul></article></div></section>
+<section class="page" id="certifications" aria-label="Certifications"><header class="page-heading"><p class="eyebrow">Credentials</p><h1 tabindex="-1">Certifications</h1><p class="lead">Training and internship credentials that support my work.</p></header><div class="grid two"><article class="card certificate"><a href="https://res.cloudinary.com/wzyad20a/image/upload/v1793119835/Certificate.jpg" target="_blank" rel="noopener noreferrer" aria-label="View Java Programming Internship certificate"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_720,c_limit/v1793119835/Certificate.jpg" width="720" height="480" alt="Java Programming Internship certificate issued by CodeAlpha" loading="lazy" decoding="async"></a><h2>Java Programming Internship</h2><p class="entry-meta">CodeAlpha · 2025</p><p>Completed a one-month virtual internship in Java programming, strengthening practical programming experience and analytical problem-solving skills. Received a letter of recommendation recognizing adaptability, productivity, collaboration, and a commitment to learning new technologies.</p></article><article class="card certificate"><a href="https://res.cloudinary.com/wzyad20a/image/upload/v1793120459/Capture_d_%C3%A9cran_2026-10-27_215939.png" target="_blank" rel="noopener noreferrer" aria-label="View Microsoft SQL Certified certificate"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_720,c_limit/v1793120459/Capture_d_%C3%A9cran_2026-10-27_215939.png" width="720" height="480" alt="Microsoft SQL Certified certificate issued by Microsoft" loading="lazy" decoding="async"></a><h2>Microsoft SQL Certified</h2><p class="entry-meta">Microsoft · June 2026</p><p>Strengthened foundational knowledge of SQL and relational databases, with an emphasis on understanding structured data and using queries to retrieve meaningful information. Built a stronger foundation for database development, data exploration, and reporting within database-driven applications.</p></article><article class="card certificate"><a href="https://res.cloudinary.com/wzyad20a/image/upload/v1793215972/Capture_d_%C3%A9cran_2026-10-29_003231.png" target="_blank" rel="noopener noreferrer" aria-label="View Introduction to Prompt Engineering certificate"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_720,c_limit/v1793215972/Capture_d_%C3%A9cran_2026-10-29_003231.png" width="720" height="480" alt="Introduction to Prompt Engineering certificate issued by SimpliLearn" loading="lazy" decoding="async"></a><h2>Introduction to Prompt Engineering</h2><p class="entry-meta">SimpliLearn · Feb 2026</p><p>Developed a foundational understanding of prompt engineering and the role of clear instructions in guiding generative AI responses. Strengthened the ability to communicate task requirements effectively when using AI tools for learning, content creation, and software development support.</p></article><article class="card certificate"><a href="https://res.cloudinary.com/wzyad20a/image/upload/v1793123983/Capture_d_%C3%A9cran_2026-10-27_225917.png" target="_blank" rel="noopener noreferrer" aria-label="View Get Started with SQL Analytics and BI on Databricks certificate"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_720,c_limit/v1793123983/Capture_d_%C3%A9cran_2026-10-27_225917.png" width="720" height="480" alt="Get Started with SQL Analytics and BI on Databricks certificate issued by SimpliLearn" loading="lazy" decoding="async"></a><h2>Get Started with SQL Analytics and BI on Databricks</h2><p class="entry-meta">SimpliLearn · Feb 2026</p><p>Gained introductory knowledge of SQL analytics and business intelligence on Databricks. Developed an understanding of how SQL-based analysis supports data exploration, reporting, and business insights, extending a database development foundation toward analytical workflows.</p></article><article class="card certificate"><a href="https://res.cloudinary.com/wzyad20a/image/upload/v1793123880/Capture_d_%C3%A9cran_2026-10-27_225730.png" target="_blank" rel="noopener noreferrer" aria-label="View Getting Started with Git and GitHub certificate"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_720,c_limit/v1793123880/Capture_d_%C3%A9cran_2026-10-27_225730.png" width="720" height="480" alt="Getting Started with Git and GitHub certificate issued by IBM" loading="lazy" decoding="async"></a><h2>Getting Started with Git and GitHub</h2><p class="entry-meta">IBM · July 2026</p><p>Developed a foundational understanding of version control with Git and GitHub, including managing source code, tracking changes, and supporting collaborative development. Strengthened the knowledge needed to maintain organized repositories and contribute to structured software development workflows.</p></article><article class="card certificate"><a href="https://res.cloudinary.com/wzyad20a/image/upload/v1793119841/Introduction_to_SQL.pdf.jpg" target="_blank" rel="noopener noreferrer" aria-label="View Introduction to SQL certificate"><img src="https://res.cloudinary.com/wzyad20a/image/upload/f_auto,q_auto,w_720,c_limit/v1793119841/Introduction_to_SQL.pdf.jpg" width="720" height="480" alt="Introduction to SQL certificate issued by SimpliLearn" loading="lazy" decoding="async"></a><h2>Introduction to SQL</h2><p class="entry-meta">SimpliLearn · Feb 2026</p><p>Starting with SQL ,Optimizing Query and Build Database Schema</p></article></div></section>
+<section class="page" id="services" aria-label="Zorvexa"><div class="company"><header class="page-heading"><p class="eyebrow">Company · Founded by Muhammad Hussain</p><h1 tabindex="-1">Zorvexa</h1><p class="lead">Data engineering · AI intelligence · Scalable technology</p></header><div class="grid two"><article><h2>Who we are</h2><p>At Zorvexa, we turn business data into dependable systems. We bring together data engineering, AI intelligence, and scalable technology to build practical solutions around the way our clients work.</p></article><article><h2>Our mission</h2><p>We help businesses build data foundations they can trust and grow with. We start with the problem, choose suitable technology, and deliver clear, maintainable solutions with a practical purpose.</p></article></div><a class="btn" href="https://www.linkedin.com/company/zorvexa-data/" target="_blank" rel="noopener noreferrer">Explore Zorvexa on LinkedIn ↗</a></div><h2 class="subheading">What we can help with</h2><div class="grid two"><article class="card"><h3>Relational database design</h3></article><article class="card"><h3>SQL queries and database integration</h3></article><article class="card"><h3>Java desktop business applications</h3></article><article class="card"><h3>Python dashboards and reporting tools</h3></article><article class="card"><h3>Database optimization and improvements</h3></article></div></section>
+<section class="page" id="contact" aria-label="Contact"><header class="page-heading"><p class="eyebrow">Let’s talk</p><h1 tabindex="-1">Tell me about your data challenge</h1><p class="lead">For opportunities, database projects, or collaboration, contact me directly or use the form.</p></header><div class="contact-layout"><aside><h2>Reach me directly</h2><p>I welcome a clear description of the problem, your timeline, and the outcome you need.</p><div class="contact-links"><a class="" href="mailto:mhussain950091@gmail.com"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><strong>Email</strong>mhussain950091@gmail.com</span></a><a class="" href="https://www.linkedin.com/in/muhammad-hussain-478731340/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.01M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg><span><strong>LinkedIn</strong>Connect on LinkedIn</span></a><a class="" href="https://github.com/mhussain950091-tech" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5C19 15 21 13 21 9a6 6 0 0 0-1.5-4 5 5 0 0 0-.1-4S17 1 15 3a15 15 0 0 0-6 0C7 1 4.6 1 4.6 1a5 5 0 0 0-.1 4A6 6 0 0 0 3 9c0 4 2 6 6.5 6.5C9 16 9 17 9 18v4"/></svg><span><strong>GitHub</strong>Explore my code</span></a><a class="" href="https://wa.me/923105324610" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.4 7.8L3 21l1.7-4.6A9 9 0 1 1 21 11.5Z"/><path d="M8 7c-2 4 4 10 8 8l-2-3-2 1-2-2 1-2z"/></svg><span><strong>WhatsApp</strong>Start a conversation</span></a><a class="" href="https://www.fiverr.com/m_hussain_123" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 21V8c0-4 2-6 6-6h2M5 9h14v12M14 21h8M18 3v.01"/></svg><span><strong>Fiverr</strong>View my services</span></a></div></aside><form id="contactForm" class="contact-form" action="/api/contact" method="post"><h2 class="full">Send an enquiry</h2><div class="form-trap" aria-hidden="true" inert><label for="website">Leave empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><div class="field "><label for="name">Your name</label><input id="name" name="name" type="text" maxlength="100" required autocomplete="name"></div><div class="field "><label for="email">Your email</label><input id="email" name="email" type="email" maxlength="254" required autocomplete="email"></div><div class="field full"><label for="subject">Subject (optional)</label><input id="subject" name="subject" type="text" maxlength="160"  ></div><div class="field full"><label for="message">Your message</label><textarea id="message" name="message" rows="6" maxlength="5000" required></textarea></div><button type="submit" class="btn primary full" disabled><span>Send message</span></button><noscript><p class="full">Please use the email or LinkedIn links to contact me when JavaScript is disabled.</p></noscript><p class="contact-status full" id="contactStatus" role="status" aria-live="polite"></p></form></div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Muhammad Hussain</strong><p>Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified</p><small>© <span id="footerYear">2026</span> Muhammad Hussain. All rights reserved.</small></div><div class="social-links"><a class="" href="https://github.com/mhussain950091-tech" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5C19 15 21 13 21 9a6 6 0 0 0-1.5-4 5 5 0 0 0-.1-4S17 1 15 3a15 15 0 0 0-6 0C7 1 4.6 1 4.6 1a5 5 0 0 0-.1 4A6 6 0 0 0 3 9c0 4 2 6 6.5 6.5C9 16 9 17 9 18v4"/></svg>GitHub</a><a class="" href="https://www.linkedin.com/in/muhammad-hussain-478731340/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.01M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg>LinkedIn</a><a class="" href="mailto:mhussain950091@gmail.com"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a></div></div></footer>
+</body></html>

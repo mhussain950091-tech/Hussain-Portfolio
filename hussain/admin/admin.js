@@ -8,73 +8,7 @@
   const DEFAULT_PW = 'hussain2024';
 
   let data = {};
-
-  // ── Embedded base data (same as main site) ──
-  const BASE_DATA = {
-    "profile": {
-      "name": "Muhammad Hussain",
-      "title": "Database & Software Developer",
-      "subtitle": "Software Engineering Student | Founder of Zorvexa | Aspiring Data Engineer",
-      "email": "mhussain950091@gmail.com",
-      "phone": "+92 310 5324610",
-      "location": "Wah Cantt / Talagang, Pakistan",
-      "github": "https://github.com/mhussain950091-tech",
-      "linkedin": "https://www.linkedin.com/in/muhammad-hussain-478731340/",
-      "fiverr": "https://www.fiverr.com/m_hussain_123",
-      "zorvexa_linkedin": "https://www.linkedin.com/company/zorvexa-data/",
-      "bio": "I build database-driven software that solves real business problems. From hotel management systems and POS applications to AI-powered synthetic data platforms, my work sits at the intersection of relational databases, backend logic, and practical software delivery. Currently pursuing BS Software Engineering at COMSATS University Islamabad while building Zorvexa — a software company focused on databases, development, and AI-enabled solutions."
-    },
-    "projects": [
-      {"id":"synthora-ai","title":"Synthora AI","tagline":"Synthetic Data Generation Platform","description":"A platform that generates realistic synthetic datasets for testing and development — no real customer data needed. Supports tabular, relational, and document data with schema design, data integrity checks, and saved dataset management.","role":"Team Leader — Database Engineering & Schema Design","context":"HackDataV2 Project","technologies":["Python","Database Design","Relational Modeling","Schema Validation","Vercel"],"liveUrl":"https://synthora-ai-nine.vercel.app/","repoUrl":"https://github.com/mhussain950091-tech","featured":true,"image":"","video":""},
-      {"id":"novasight","title":"NovaSight","tagline":"AI-Powered Dashboard Intelligence","description":"Upload CSV or Excel data and get automatic visual dashboards with KPIs, chart selection, and exportable reports. Built with database migration, session management, and AI chat integration.","role":"Full-stack Developer","context":"Data Analytics Platform","technologies":["Python","Streamlit","pandas","NumPy","Plotly","PostgreSQL"],"liveUrl":"","repoUrl":"","featured":true,"image":"","video":""},
-      {"id":"fast-food-pos","title":"Fast Food POS","tagline":"Java Desktop Point-of-Sale System","description":"A complete POS application built for a Sargodha fast-food business. Handles sales, cart management, product inventory, payment processing (cash, card, online), and reporting — packaged as a standalone desktop installer.","role":"Solo Developer","context":"Business Client Project","technologies":["Java Swing","JDBC","MySQL","Launch4j"],"liveUrl":"","repoUrl":"https://github.com/mhussain950091-tech/personal-pos","featured":true,"image":"","video":""},
-      {"id":"sarina-hotel","title":"Sarina Hotel Management System","tagline":"Hotel Operations & Records Platform","description":"Desktop application managing rooms, guests, bookings, facilities, billing, staff, and departments. Demonstrates relational schema design, CRUD operations, and full application-database integration.","role":"Developer","context":"CodeAlpha Internship Project","technologies":["Java Swing","JDBC","MySQL"],"liveUrl":"","repoUrl":"https://github.com/mhussain950091-tech/Code-alpha_hotel_management_system","featured":true,"image":"","video":""},
-      {"id":"apni-wah-biryani","title":"Apni Wah Biryani","tagline":"Food-Ordering System Design","description":"System design for a food-ordering platform with customer website, admin panel, menu management, and multiple payment options (WhatsApp, Easypaisa, Cash). Includes requirements analysis, use cases, and data-flow diagrams.","role":"System Designer","context":"In Development","technologies":["HTML","CSS","JavaScript","Database Design"],"liveUrl":"","repoUrl":"","featured":false,"image":"","video":""}
-    ],
-    "skills": {
-      "Database Systems":["MySQL","PostgreSQL","SQL Server","Oracle 21c"],
-      "Database Concepts":["SQL","ER Diagrams","Normalization","Relational Modeling","Schema Design","Data Integrity"],
-      "Programming":["Java","Python","C++","JavaScript"],
-      "Desktop Development":["Java Swing","JDBC"],
-      "Data & Analytics":["pandas","NumPy","Streamlit","Plotly","Power BI"],
-      "Web Foundations":["HTML","CSS","JavaScript"],
-      "Tools & Deployment":["Git","GitHub","Launch4j","Vercel"],
-      "Currently Learning":["Flutter","Dart","Mobile Development"]
-    },
-    "journey": [
-      {"period":"Before University","event":"FSc ICS from Punjab College Talagang — 977/1200 marks"},
-      {"period":"Sep 2024","event":"Started BS Software Engineering at COMSATS University Islamabad, Wah Campus"},
-      {"period":"2024–2025","event":"Built foundation in C++, databases, digital logic, and software development"},
-      {"period":"2025","event":"Developed interest in SQL, relational database design, and Java desktop applications"},
-      {"period":"Late 2025","event":"Built Sarina Hotel Management System — rooms, guests, bookings, payments with full database integration"},
-      {"period":"Early 2026","event":"Developed Fast Food POS for a Sargodha business using Java Swing and MySQL"},
-      {"period":"2026","event":"Expanded into Python, pandas, Streamlit, and analytics dashboards"},
-      {"period":"Mid 2026","event":"Built NovaSight — converting uploaded data into dashboards and insights"},
-      {"period":"Sep 2026","event":"Led three-member team to build Synthora AI for HackDataV2"},
-      {"period":"Sep–Oct 2026","event":"Founded Zorvexa — developing company identity and LinkedIn presence"},
-      {"period":"Oct 2026","event":"Continued into web development, Flutter, and food-ordering system planning"}
-    ],
-    "certifications": [
-      {"title":"Java Programming Internship","issuer":"CodeAlpha","date":"2025","description":"Internship work with certificate and recommendation letter","image":""},
-      {"title":"Machine Learning Internship","issuer":"CodeAlpha","date":"2025","description":"Credit Scoring classification project","image":""},
-      {"title":"SQL Certificate","issuer":"Simplilearn","date":"January 2026","description":"SQL fundamentals and database querying","image":""},
-      {"title":"Generative AI Certificate","issuer":"—","date":"January 2026","description":"Generative AI foundations","image":""}
-    ],
-    "leadership": [
-      {"role":"Head of Events","org":"COMSATS Heritage Society","description":"Progressed from junior/executive responsibilities to events leadership"},
-      {"role":"Punjab Culture Head","org":"COMSATS Heritage Society","description":"Led cultural programming and event coordination"},
-      {"role":"Team Leader","org":"Synthora AI — HackDataV2","description":"Led three-member development team"},
-      {"role":"Founder & CEO","org":"Zorvexa","description":"Building a software company focused on databases, development, and AI solutions"},
-      {"role":"Badminton Captain","org":"College Team","description":"College captain, district Talagang silver medal"}
-    ],
-    "zorvexa": {
-      "name":"Zorvexa",
-      "role":"Founder & CEO",
-      "focus":"Databases, Software Development, AI-enabled Solutions",
-      "services":["Relational database design","SQL queries and database integration","Java desktop business applications","Python dashboards and reporting tools","Database optimization and improvements"],
-      "linkedin":"https://www.linkedin.com/company/zorvexa-data/"
-    }
-  };
+  let ready = false;
 
   // ── Helpers ──
   function qs(sel) { return document.querySelector(sel); }
@@ -146,7 +80,18 @@
         });
       }
     } catch (e) { /* */ }
+    try {
+      const configResponse = await fetch('../site.config.json', { cache: 'no-store' });
+      if (!configResponse.ok) throw new Error('Configuration unavailable');
+      const config = await configResponse.json();
+      data.profile.title = config.professionalTitle;
+    } catch (error) {
+      toast('Could not load site settings. Reload before editing.', true);
+      return;
+    }
     renderAll();
+    ready = true;
+    qs('#exportJsonBtn').disabled = false;
   }
 
   function renderAll() {
@@ -157,6 +102,8 @@
     renderLeadership();
     renderCertifications();
     renderZorvexa();
+    renderCareerEditor('experience');
+    renderCareerEditor('education');
   }
 
   // ── Tab Navigation ──
@@ -301,7 +248,12 @@
     qs('#projectForm').addEventListener('submit', (e) => {
       e.preventDefault();
       const id = qs('#proj-id').value;
+      const previous = (data.projects || []).find(p => p.id === id) || {};
       const proj = {
+        ...previous,
+        problem: qs('#proj-problem').value.trim(),
+        built: qs('#proj-built').value.trim(),
+        impact: qs('#proj-impact').value.trim(),
         id: id || slugify(qs('#proj-title').value),
         title: qs('#proj-title').value,
         tagline: qs('#proj-tagline').value,
@@ -312,6 +264,7 @@
         liveUrl: qs('#proj-live').value,
         repoUrl: qs('#proj-repo').value,
         featured: qs('#proj-featured').checked,
+        category: qs('#proj-category').value,
         image: getUrlInput('proj-image-url'),
         video: getUrlInput('proj-video-url'),
       };
@@ -339,6 +292,9 @@
       qs('#projectModalTitle').textContent = 'Edit Project';
       qs('#proj-id').value = p.id || '';
       qs('#proj-title').value = p.title || '';
+      qs('#proj-problem').value = p.problem || p.tagline || '';
+      qs('#proj-built').value = p.built || '';
+      qs('#proj-impact').value = p.impact || '';
       qs('#proj-tagline').value = p.tagline || '';
       qs('#proj-desc').value = p.description || '';
       qs('#proj-role').value = p.role || '';
@@ -347,6 +303,7 @@
       qs('#proj-live').value = p.liveUrl || '';
       qs('#proj-repo').value = p.repoUrl || '';
       qs('#proj-featured').checked = !!p.featured;
+      qs('#proj-category').value = p.category || (/ai|synthetic|dashboard/i.test(p.title + ' ' + p.tagline) ? 'ai' : 'business');
       setUrlInput('proj-image-url', 'proj-image-preview', p.image || '', 'image');
       setUrlInput('proj-video-url', 'proj-video-preview', p.video || '', 'video');
     } else {
@@ -361,6 +318,57 @@
 
   function closeProjectModal() {
     qs('#projectModal').style.display = 'none';
+  }
+
+
+  // Shared CRUD editor; entries retain the schema used by the public site.
+  const careerFields = {
+    experience: [['title', 'Role / title'], ['company', 'Company / organisation'], ['type', 'Experience type'], ['period', 'Dates (e.g. Jun–Aug 2026 or 2026–Present)'], ['description', 'Responsibilities and achievements'], ['highlights', 'Highlights (one per line)']],
+    education: [['degree', 'Degree / programme / qualification'], ['institution', 'Institution'], ['period', 'Dates (e.g. 2024–Present)'], ['description', 'Field of study, results and details']]
+  };
+  function renderCareerEditor(key, index = -1) {
+    const rows = data[key] || [];
+    const entry = rows[index] || {};
+    const fields = careerFields[key].map(([field, label]) => {
+      const value = Array.isArray(entry[field]) ? entry[field].join('\n') : (entry[field] || '');
+      const id = key + '-' + field;
+      let control;
+      if (field === 'type') {
+        control = '<select id="' + id + '" name="type">' + ['Employment', 'Internship', 'Freelance', 'Membership', 'Volunteer', 'Other'].map(type => '<option' + (type === value ? ' selected' : '') + '>' + type + '</option>').join('') + '</select>';
+      } else if (field === 'description' || field === 'highlights') {
+        control = '<textarea id="' + id + '" name="' + field + '" rows="4">' + esc(value) + '</textarea>';
+      } else {
+        control = '<input id="' + id + '" name="' + field + '" value="' + escAttr(value) + '" required maxlength="200">';
+      }
+      return '<div class="form-group' + (field === 'description' || field === 'highlights' ? ' full-width' : '') + '"><label for="' + id + '">' + label + '</label>' + control + '</div>';
+    }).join('');
+    qs('#' + key + 'Editor').innerHTML = '<div class="career-list">' + (rows.length ? rows.map((row, i) =>
+      '<article class="item-card"><div class="item-card__info"><h3>' + esc(row.title || row.degree) + '</h3><p>' + esc(row.company || row.institution) + ' · ' + esc(row.period || '') + '</p></div><div class="item-card__actions"><button type="button" data-action="edit" data-index="' + i + '">Edit</button><button type="button" data-action="up" data-index="' + i + '"' + (i === 0 ? ' disabled' : '') + '>Move up</button><button type="button" data-action="delete" data-index="' + i + '" class="delete">Delete</button></div></article>'
+    ).join('') : '<p class="panel-note">No entries yet. Add your first entry below.</p>') + '</div><h3 class="editor-title">' + (index < 0 ? 'Add entry' : 'Edit entry') + '</h3><form class="admin-form" data-index="' + index + '">' + fields + '<div class="form-actions"><button class="btn btn--primary" type="submit">Save entry</button><button class="btn btn--outline" type="button" data-action="cancel">Cancel / new entry</button></div></form>';
+  }
+  function setupCareerEditor(key) {
+    const container = qs('#' + key + 'Editor');
+    container.addEventListener('submit', event => {
+      event.preventDefault();
+      const form = event.target;
+      const index = Number(form.dataset.index);
+      const entry = { ...((data[key] || [])[index] || {}) };
+      careerFields[key].forEach(([field]) => { entry[field] = form.elements[field].value.trim(); });
+      if (key === 'experience') entry.highlights = entry.highlights.split('\n').map(v => v.trim()).filter(Boolean);
+      if (!data[key]) data[key] = [];
+      if (index >= 0) data[key][index] = entry; else data[key].push(entry);
+      saveData(); renderCareerEditor(key);
+    });
+    container.addEventListener('click', event => {
+      const button = event.target.closest('button[data-action]');
+      if (!button) return;
+      const index = Number(button.dataset.index);
+      const action = button.dataset.action;
+      if (action === 'edit') { renderCareerEditor(key, index); qs('#' + key + 'Editor form input').focus(); }
+      if (action === 'cancel') renderCareerEditor(key);
+      if (action === 'delete' && confirm('Delete this entry from your draft?')) { data[key].splice(index, 1); saveData(); renderCareerEditor(key); }
+      if (action === 'up' && index > 0) { [data[key][index - 1], data[key][index]] = [data[key][index], data[key][index - 1]]; saveData(); renderCareerEditor(key); }
+    });
   }
 
   // ── Skills ──
@@ -689,6 +697,7 @@
     });
 
     qs('#exportJsonBtn').addEventListener('click', () => {
+      if (!ready) return;
       // Build clean JSON from current data
       const exportData = JSON.parse(JSON.stringify(data));
       const jsonStr = JSON.stringify(exportData, null, 2);
@@ -726,6 +735,16 @@
 
   // ── Init ──
   function init() {
+    // Block edits until published data has loaded, avoiding partial exports.
+    qs('#exportJsonBtn').disabled = true;
+    document.addEventListener('submit', event => {
+      if (event.target.id !== 'loginForm' && !ready) { event.preventDefault(); event.stopImmediatePropagation(); toast('Please wait for your data to load.', true); }
+    }, true);
+    qsa('.form-group').forEach(group => {
+      const label = group.querySelector('label');
+      const input = group.querySelector('input, textarea, select');
+      if (label && input && input.id) label.htmlFor = input.id;
+    });
     setupLogin();
     setupTabs();
 
@@ -737,12 +756,37 @@
 
     setupProfile();
     setupProjects();
+    setupCareerEditor('experience');
+    setupCareerEditor('education');
     setupSkills();
     setupJourney();
     setupLeadership();
     setupCertifications();
     setupZorvexa();
     setupExportJson();
+    let lastFocus;
+    qsa('.modal').forEach(modal => {
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      modal.setAttribute('aria-label', modal.querySelector('h3').textContent);
+      modal.querySelector('.modal__close').setAttribute('aria-label', 'Close editor');
+      const observer = new MutationObserver(() => {
+        if (modal.style.display !== 'none') {
+          lastFocus = document.activeElement;
+          modal.querySelector('input:not([type=hidden]),select,textarea,button').focus();
+        } else if (lastFocus && lastFocus.isConnected) lastFocus.focus();
+      });
+      observer.observe(modal, { attributes: true, attributeFilter: ['style'] });
+      modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+      modal.addEventListener('keydown', e => {
+        if (e.key === 'Escape') modal.style.display = 'none';
+        if (e.key !== 'Tab') return;
+        const focusable = [...modal.querySelectorAll('button,input:not([type=hidden]),textarea,select,a[href]')].filter(el => !el.disabled);
+        const first = focusable[0], last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      });
+    });
 
     // URL preview handlers (Cloudinary URLs)
     setupUrlPreview('pf-image-url', 'pf-image-preview', 'image');

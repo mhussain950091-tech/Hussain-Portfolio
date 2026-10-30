@@ -1,8 +1,8 @@
 {
   "profile": {
     "name": "Muhammad Hussain",
-    "title": "Software Engineer",
-    "subtitle": "Database Engineer (PostgreSQL, MySQL, SQL Server,MongoBD) | Microsoft SQL Certified. ",
+    "title": "Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified",
+    "subtitle": "Founder of Zorvexa",
     "email": "mhussain950091@gmail.com",
     "phone": "+92 310 5324610",
     "location": "Islamabad , Pakistan",
@@ -10,8 +10,9 @@
     "linkedin": "https://www.linkedin.com/in/muhammad-hussain-478731340/",
     "fiverr": "https://www.fiverr.com/m_hussain_123",
     "zorvexa_linkedin": "https://www.linkedin.com/company/zorvexa-data/",
-    "bio": "Behind every great digital experience is a system built well. That’s where I focus.I’m Muhammad Hussain, a software engineer, backend developer, and founder of Zorvexa. I build the systems behind applications from databases that keep information organized to backend services that turn complex requirements into practical features.Working with SQL, Python, Java, and modern database technologies, I enjoy connecting data, logic, and software to solve real problems. My interests extend into data engineering and AI-powered applications, with a consistent goal: creating technology that is useful, dependable, and thoughtfully built.",
-    "profileImage": "https://res.cloudinary.com/wzyad20a/image/upload/v1793115551/MY_professional_picture.png"
+    "bio": "I’m Muhammad Hussain, a Database Engineer and the founder of Zorvexa. I build reliable data foundations for business applications, analytics dashboards, and AI-powered tools.\n\nI work with PostgreSQL, MySQL, SQL Server, and MongoDB, backed by SQL, T-SQL, Python, and Java. My work connects clear schema design, consistent data relationships, and practical application requirements.\n\nFrom relational database workflows in Synthora AI to dashboards in NovaSight and Java business applications, I focus on systems that are useful, dependable, and straightforward to maintain.",
+    "profileImage": "https://res.cloudinary.com/wzyad20a/image/upload/v1793115551/MY_professional_picture.png",
+    "headline": "I design, optimize, and secure databases your business can rely on."
   },
   "projects": [
     {
@@ -33,14 +34,18 @@
       "repoUrl": "https://github.com/mhussain950091-tech",
       "featured": true,
       "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793124110/Capture_d_écran_2026-10-27_230138.png",
-      "video": ""
+      "video": "",
+      "problem": "Teams need realistic test data without exposing sensitive information.",
+      "built": "I led the database workflow, designed PK–FK relationships, and integrated relational and document data flows into a deployed prototype.",
+      "impact": "Working hackathon prototype; [add metric: datasets generated or validation coverage].",
+      "category": "ai"
     },
     {
       "id": "novasight",
       "title": "NovaSight",
       "tagline": "AI-Powered Dashboard Intelligence",
       "description": "NovaSight is an AI-powered dashboard creation platform that turns raw CSV data into interactive, presentation-ready dashboards in minutes. It removes the need for manual charting and BI tool expertise, so non-technical users can explore and understand their data on their own.\n\nMy Role\n\nAs Project Lead, I led a team of five, from planning and task distribution to integration and delivery. I also contributed to the platform’s data and database design.\n\nKey Features\n\nCSV to dashboard: Users upload a raw CSV file, and the platform builds a dashboard automatically.\nSmart chart recommendations: Suggests suitable chart types based on the structure and content of the data.\nKPI cards: Highlights key metrics at a glance.\nInteractive filters: Sidebar filters let users explore the data dynamically.\nExport: Dashboards and results can be exported for reporting and sharing.\nAI integration: Integrates the Anthropic Claude API and Gemini API to add intelligence to the analysis workflow.\nSynthetic Data module (in development): A schema-builder interface for generating tabular, relational, and document datasets.\n\nTechnology Stack\n\nPython, Streamlit, MySQL, Plotly, Anthropic Claude API, Gemini API.\n\nImpact\n\nNovaSight makes data analysis accessible to people without technical or BI backgrounds, cutting the time from raw data to usable insight.",
-      "role": "Full-stack Developer",
+      "role": "Full-stack Engineer",
       "context": "Data Analytics Platform",
       "technologies": [
         "Python",
@@ -54,14 +59,18 @@
       "repoUrl": "https://github.com/mhussain950091-tech",
       "featured": true,
       "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793124695/novasight_cover.jpg",
-      "video": ""
+      "video": "",
+      "problem": "Raw CSV files are difficult to explore without manual analysis and charting.",
+      "built": "I led a five-person team and contributed data and database design for an AI-assisted dashboard platform.",
+      "impact": "Turned uploaded data into interactive dashboards; [add metric: time saved per report].",
+      "category": "ai"
     },
     {
       "id": "fast-food-pos",
       "title": "Fast Food POS",
       "tagline": "Java Desktop Point-of-Sale System",
-      "description": "SmartlyPOS is a point-of-sale system for marts and retail stores, with an AI voice control layer on top. Cashiers and shop staff can speak to the system instead of searching menus and typing, which speeds up billing and reduces errors during busy hours.\n\nKey Features\n\nVoice price queries: Staff can ask for a product’s price by voice, for example “check price of Pepsi”, and get an instant answer.\nVoice order actions: Staff can build an order by speaking, for example “add two brushes and Safina chawal to order”. The AI understands the items and quantities, adds them to the order, and calculates the total price.\nCore POS functionality: A complete base system for managing products, orders, and billing, built before the voice layer is added.\n\nTechnology Stack\n\nFrontend: React, TypeScript\nBackend: FastAPI (Python)\nDatabase: PostgreSQL\nAI layer: Voice command understanding for queries and order actions\n\nMy Role\n\nI conceived, designed, and am building the entire system on my own, from product concept and database design to the interface and AI integration.\n\nCurrent Status\n\nThe base POS system is under development, and the product landing page is in progress. The voice control layer will be added once the core system is stable.",
-      "role": "Solo Developer",
+      "description": "I built a Java Swing and MySQL point-of-sale application for a fast-food business, covering products, orders, payments and reporting. The earlier saved description referred to the separate SmartlyPOS project and is retained in sourceNotes for review.",
+      "role": "Solo Engineer",
       "context": "Business Client Project",
       "technologies": [
         "Java Swing",
@@ -73,14 +82,19 @@
       "repoUrl": "https://github.com/mhussain950091-tech/personal-pos",
       "featured": true,
       "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793124821/pos_client_cover.jpg",
-      "video": ""
+      "video": "",
+      "problem": "A restaurant needed a consistent way to manage billing, products, and sales records.",
+      "built": "I built a Java Swing application connected to MySQL for cart management, payments, inventory, and daily reporting.",
+      "impact": "Delivered a desktop POS for a business client; [add metric: daily orders processed].",
+      "category": "business",
+      "sourceNotes": "SmartlyPOS is a point-of-sale system for marts and retail stores, with an AI voice control layer on top. Cashiers and shop staff can speak to the system instead of searching menus and typing, which speeds up billing and reduces errors during busy hours.\n\nKey Features\n\nVoice price queries: Staff can ask for a product’s price by voice, for example “check price of Pepsi”, and get an instant answer.\nVoice order actions: Staff can build an order by speaking, for example “add two brushes and Safina chawal to order”. The AI understands the items and quantities, adds them to the order, and calculates the total price.\nCore POS functionality: A complete base system for managing products, orders, and billing, built before the voice layer is added.\n\nTechnology Stack\n\nFrontend: React, TypeScript\nBackend: FastAPI (Python)\nDatabase: PostgreSQL\nAI layer: Voice command understanding for queries and order actions\n\nMy Role\n\nI conceived, designed, and am building the entire system on my own, from product concept and database design to the interface and AI integration.\n\nCurrent Status\n\nThe base POS system is under development, and the product landing page is in progress. The voice control layer will be added once the core system is stable."
     },
     {
       "id": "sarina-hotel",
       "title": "Hotel Management System",
       "tagline": "Hotel Operations & Records Platform",
       "description": "The Hotel Management System is a database-driven application that manages the daily operations of a hotel in one place. It replaces manual registers and scattered records with a structured system for guest registration, room allocation, bookings, check-in and check-out, and billing.\n\nThe system keeps room availability up to date, prevents double bookings, and stores every guest record and transaction in a relational database. This gives hotel staff accurate information and reduces errors in daily work.\n\nMy role: I worked on the project as part of a team, contributing to the database design and the system’s core logic, including the relationships between guests, rooms, bookings, and billing.",
-      "role": "Junior Developer",
+      "role": "Junior Engineer",
       "context": "CodeAlpha Internship Project",
       "technologies": [
         "Java Swing",
@@ -91,47 +105,53 @@
       "repoUrl": "https://github.com/mhussain950091-tech/Code-alpha_hotel_management_system",
       "featured": true,
       "image": "https://res.cloudinary.com/wzyad20a/image/upload/v1793125146/hotel_management_gold_cover.jpg",
-      "video": ""
+      "video": "",
+      "problem": "Hotel teams need connected records for guests, rooms, bookings, and billing.",
+      "built": "I contributed relational database design and application logic for a Java Swing and MySQL hotel management system.",
+      "impact": "Centralized hotel records and booking workflows; [add metric: records managed or time saved].",
+      "category": "business"
     }
   ],
   "skills": {
-    "Database Systems": [
-      "MySQL",
+    "Databases": [
       "PostgreSQL",
+      "MySQL",
       "SQL Server",
-      "Oracle 21c"
+      "MongoDB"
     ],
-    "Database Concepts": [
+    "Languages": [
       "SQL",
-      "ER Diagrams",
-      "Normalization",
-      "Relational Modeling",
-      "Schema Design",
-      "Data Integrity"
-    ],
-    "Programming": [
-      "Java",
+      "T-SQL",
       "Python",
+      "Java",
       "C++",
       "JavaScript"
     ],
-    "Data & Analytics": [
+    "Database Engineering": [
+      "Schema Design",
+      "Relational Modeling",
+      "Primary & Foreign Keys",
+      "Data Integrity",
+      "SQL Validation",
+      "Database Migration",
+      "ER Diagrams",
+      "Normalization"
+    ],
+    "Data & Applications": [
       "pandas",
       "NumPy",
       "Streamlit",
       "Plotly",
-      "Power BI"
-    ],
-    "Web Foundations": [
+      "Java Swing",
+      "JDBC",
       "HTML",
-      "CSS",
-      "JavaScript"
+      "CSS"
     ],
-    "Tools & Deployment": [
+    "Tools": [
       "Git",
       "GitHub",
-      "Launch4j",
-      "Vercel"
+      "Vercel",
+      "Launch4j"
     ]
   },
   "journey": [
@@ -241,7 +261,7 @@
   "zorvexa": {
     "name": "Zorvexa",
     "role": "Founder & CEO",
-    "focus": "Databases, Software Development, AI-enabled Solutions",
+    "focus": "Data engineering · AI intelligence · Scalable technology",
     "services": [
       "Relational database design",
       "SQL queries and database integration",
@@ -250,7 +270,40 @@
       "Database optimization and improvements"
     ],
     "linkedin": "https://www.linkedin.com/company/zorvexa-data/",
-    "introduction": "Zorvexa is founded by Muhammad Hussain to help businesses turn scattered data into dependable software.Your ideas deserve a strong technical foundation.Zorvexa brings together database solutions, custom software development, and AI automation to help businesses turn everyday challenges into better ways of working. We bring together database design, business applications, analytics dashboards, and AI-enabled tools to solve practical operational problems.",
-    "mission": "From organizing business data and developing web and desktop applications to building AI agents and insightful dashboards, we focus on solutions shaped around how your business operates. Our approach starts with understanding the problem, choosing the right technology, and building with clarity and purpose."
-  }
+    "introduction": "At Zorvexa, we turn business data into dependable systems. We bring together data engineering, AI intelligence, and scalable technology to build practical solutions around the way our clients work.",
+    "mission": "We help businesses build data foundations they can trust and grow with. We start with the problem, choose suitable technology, and deliver clear, maintainable solutions with a practical purpose."
+  },
+  "experience": [
+    {
+      "title": "Founder & CEO",
+      "company": "Zorvexa",
+      "type": "Employment",
+      "period": "2026–Present",
+      "description": "I build database solutions, business applications and data tools through Zorvexa.",
+      "highlights": [
+        "Database engineering",
+        "Business applications"
+      ]
+    },
+    {
+      "title": "Java Programming Intern",
+      "company": "CodeAlpha",
+      "type": "Internship",
+      "period": "2025",
+      "description": "I completed a virtual internship in Java programming and contributed to a database-driven hotel management application.",
+      "highlights": [
+        "Java Swing",
+        "MySQL",
+        "JDBC"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BS Software Engineering",
+      "institution": "COMSATS University Islamabad, Wah Campus",
+      "period": "2024–Present",
+      "description": "I am pursuing my degree in Software Engineering."
+    }
+  ]
 }
