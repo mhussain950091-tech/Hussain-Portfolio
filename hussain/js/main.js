@@ -9,6 +9,7 @@
     if (id === 'education') id = 'experience';
     if (!valid.has(id)) id = 'about';
     pages.forEach(page => { page.hidden = page.id !== id; });
+    document.querySelector('.site-footer').hidden = id !== 'about' && id !== 'contact';
     nav.forEach(a => a.dataset.page === id ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
     if (focus) { document.querySelector('#' + id + ' h1').focus({ preventScroll: true }); window.scrollTo(0, 0); }
   }

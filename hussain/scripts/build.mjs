@@ -74,7 +74,7 @@ const html=`<!doctype html>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="nav-inner"><a class="brand" href="#about">Muhammad Hussain</a><nav aria-label="Main navigation"><ul>${pages.map(([id,label])=>`<li><a href="#${id}" data-page="${id}">${label}</a></li>`).join('')}</ul></nav></div></header>
 <main class="container" id="main">${about}\n${experience}\n${projects}\n${skills}\n${certifications}\n${services}\n${contact}</main>
-<footer class="site-footer"><div class="container footer-inner"><div><strong>${e(p.name)}</strong><p>${e(config.professionalTitle)}</p><small>© <span id="footerYear">${new Date().getFullYear()}</span> ${e(p.name)}. All rights reserved.</small></div>${socials()}</div></footer>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>${e(p.name)}</strong><p>${e(config.professionalTitle)}</p><small>© <span id="footerYear">${new Date().getFullYear()}</span> ${e(p.name)}. All rights reserved.</small></div><div class="social-links">${link('mailto:'+p.email,icon('mail')+'Email')}</div></div></footer>
 </body></html>`;
 fs.writeFileSync(path.join(root,'index.html'),html);
 fs.writeFileSync(path.join(root,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nSitemap: ${base}/sitemap.xml\n`);

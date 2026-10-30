@@ -1,6 +1,6 @@
 # Muhammad Hussain portfolio
 
-The website now uses a light white/slate theme with blue as its only accent. About opens first. Navigation remains horizontal on phones. All main content is written into HTML during the build, so it can be read with JavaScript disabled. The footer is on every page.
+The website now uses a light white/slate theme with blue as its only accent. About opens first. Navigation remains horizontal on phones. All main content is written into HTML during the build, so it can be read with JavaScript disabled. The footer appears only on About (the first page) and Contact, and includes an email link without social profile links.
 
 ## Problems corrected
 
