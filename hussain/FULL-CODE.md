@@ -884,7 +884,7 @@ body { background:var(--surface); }
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel — Hussain Portfolio</title>
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#F5F8FD">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="admin.css">
@@ -1310,18 +1310,20 @@ module.exports = async function handler(req, res) {
 ````css
 /* All theme colours live here. Blue is the only accent. */
 :root {
-  --background:#FFFFFF;
-  --surface:#F8FAFC;
-  --surface-accent:#EFF6FF;
+  --background:#EEF3F9;
+  --card:#FFFFFF;
+  --header:#F5F8FD;
+  --surface:#E4ECF6;
+  --surface-accent:#E2EDFC;
   --heading:#0F172A;
   --body:#334155;
   --muted:#475569;
-  --accent:#2563EB;
-  --accent-hover:#1D4ED8;
-  --border:#CBD5E1;
+  --accent:#2456A6;
+  --accent-hover:#1C4383;
+  --border:#C7D4E5;
   --input-border:#64748B;
   --on-accent:#FFFFFF;
-  --shadow:0 3px 16px rgb(15 23 42 / 5%);
+  --shadow:0 4px 18px rgb(15 23 42 / 6%);
   --overlay:rgb(15 23 42 / 45%);
   --radius:14px;
   --font:Inter,Arial,sans-serif;
@@ -1344,9 +1346,9 @@ button,a,input,textarea,select,summary { -webkit-tap-highlight-color:transparent
 img { max-width:100%; display:block; }
 svg { flex-shrink:0; }
 .container { width:min(1160px,calc(100% - 48px)); margin-inline:auto; }
-.skip-link { position:absolute; left:16px; top:-100px; z-index:99; padding:12px; background:var(--background); }
+.skip-link { position:absolute; left:16px; top:-100px; z-index:99; padding:12px; background:var(--card); }
 .skip-link:focus { top:10px; }
-.site-header { position:sticky; top:0; z-index:20; background:var(--background); border-bottom:1px solid var(--border); }
+.site-header { position:sticky; top:0; z-index:20; background:var(--header); border-bottom:1px solid var(--border); }
 .nav-inner { max-width:1250px; margin:auto; display:flex; align-items:center; gap:24px; padding:16px 24px; }
 .brand { color:var(--heading); font-weight:750; font-size:1rem; text-decoration:none; white-space:nowrap; }
 nav { min-width:0; margin-left:auto; overflow-x:auto; scrollbar-width:thin; }
@@ -1377,7 +1379,7 @@ nav a:hover,nav a[aria-current] { color:var(--accent-hover); background:var(--su
 .portrait figcaption { font-size:.75rem; margin-top:10px; color:var(--muted); }
 .actions,.social-links,.project-links { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
 .actions { margin:24px 0; }
-.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 20px; min-height:48px; border:1px solid var(--input-border); border-radius:9px; color:var(--heading); background:var(--background); text-decoration:none; font-size:.9rem; font-weight:650; cursor:pointer; transition:background .12s,color .12s; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 20px; min-height:48px; border:1px solid var(--input-border); border-radius:9px; color:var(--heading); background:var(--card); text-decoration:none; font-size:.9rem; font-weight:650; cursor:pointer; transition:background .12s,color .12s; }
 .btn:hover { background:var(--surface); color:var(--heading); }
 .btn.primary { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
 .btn.primary:hover { background:var(--accent-hover); border-color:var(--accent-hover); }
@@ -1390,7 +1392,7 @@ button:disabled { cursor:wait; opacity:.7; }
 .facts span { font-size:.8rem; color:var(--muted); }
 .grid { display:grid; gap:24px; }
 .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.card,.entry,.project-card { min-width:0; padding:24px; background:var(--background); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); }
+.card,.entry,.project-card { min-width:0; padding:24px; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); }
 .card h2,.entry h3 { margin-bottom:12px; }
 .entries { display:grid; gap:20px; }
 .entry-meta,.organisation { color:var(--muted); margin-bottom:10px; font-size:.875rem; }
@@ -1403,7 +1405,7 @@ button:disabled { cursor:wait; opacity:.7; }
 .chips li { padding:5px 10px; background:var(--surface); border:1px solid var(--border); border-radius:6px; color:var(--body); font-size:.8rem; }
 .projects-toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:24px; }
 .projects-toolbar label { font-weight:600; }
-select { background:var(--background); color:var(--body); border:1px solid var(--input-border); border-radius:8px; padding:10px 34px 10px 12px; max-width:100%; min-height:46px; }
+select { background:var(--card); color:var(--body); border:1px solid var(--input-border); border-radius:8px; padding:10px 34px 10px 12px; max-width:100%; min-height:46px; }
 #projectCount { font-size:.8rem; color:var(--muted); margin-left:auto; }
 .project-card { padding:0; overflow:hidden; }
 .project-cover { aspect-ratio:16/10; background:var(--surface); border-bottom:1px solid var(--border); display:grid; place-items:center; padding:12px; }
@@ -1429,11 +1431,11 @@ details p { font-size:.875rem; margin-top:12px; white-space:pre-line; }
 .contact-links a { display:flex; align-items:center; gap:14px; padding:15px; border:1px solid var(--border); border-radius:10px; text-decoration:none; overflow-wrap:anywhere; }
 .contact-links strong { display:block; font-size:.8rem; }
 .contact-links span { min-width:0; font-size:.875rem; }
-.contact-form { position:relative; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
+.contact-form { background:var(--card); position:relative; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
 .full { grid-column:1/-1; }
 .field { min-width:0; display:flex; flex-direction:column; gap:8px; }
 .field label { font-size:.85rem; font-weight:600; color:var(--body); }
-.field input,.field textarea { padding:12px 14px; width:100%; min-width:0; border:1px solid var(--input-border); border-radius:8px; background:var(--background); color:var(--heading); line-height:1.5; }
+.field input,.field textarea { padding:12px 14px; width:100%; min-width:0; border:1px solid var(--input-border); border-radius:8px; background:var(--card); color:var(--heading); line-height:1.5; }
 .field input { min-height:50px; }
 .field textarea { resize:vertical; min-height:160px; }
 input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus { -webkit-box-shadow:0 0 0 1000px var(--surface-accent) inset; -webkit-text-fill-color:var(--heading); caret-color:var(--heading); }
@@ -1844,7 +1846,7 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified</title>
 <meta name="description" content="Muhammad Hussain — Database Engineer (PostgreSQL, MySQL, SQL Server, MongoDB) | Microsoft SQL Certified. Database systems, SQL projects, and founder of Zorvexa.">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#F5F8FD">
 <!-- Generated from site.config.json: change siteUrl there, then npm run build. -->
 <link rel="canonical" href="https://muhammadhussain.vercel.app/">
 <meta property="og:type" content="website">
@@ -2132,7 +2134,7 @@ const html=`<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${e(p.name)} — ${e(config.professionalTitle)}</title>
 <meta name="description" content="${e(config.description)}">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#F5F8FD">
 <!-- Generated from site.config.json: change siteUrl there, then npm run build. -->
 <link rel="canonical" href="${base}/">
 <meta property="og:type" content="website">

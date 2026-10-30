@@ -51,7 +51,7 @@ const html=`<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${e(p.name)} — ${e(config.professionalTitle)}</title>
 <meta name="description" content="${e(config.description)}">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#F5F8FD">
 <!-- Generated from site.config.json: change siteUrl there, then npm run build. -->
 <link rel="canonical" href="${base}/">
 <meta property="og:type" content="website">
