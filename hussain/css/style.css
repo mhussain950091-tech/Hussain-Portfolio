@@ -49,7 +49,20 @@ nav a:hover,nav a[aria-current] { color:var(--accent-hover); background:var(--su
 .eyebrow { color:var(--accent-hover); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:.75rem; margin-bottom:16px; }
 .lead { font-size:1.08rem; max-width:730px; margin-top:20px; }
 .professional-title { max-width:700px; font-size:1rem; font-weight:650; margin-bottom:24px; }
-.about-hero { display:grid; grid-template-columns:minmax(0,1fr) 280px; align-items:center; gap:56px; }
+/* Identity and portrait share a row at every device size. */
+.about-hero { display:grid; grid-template-columns:minmax(0,1fr) 280px; grid-template-areas:"identity portrait" "message portrait"; align-items:start; column-gap:56px; row-gap:24px; }
+.profile-identity { grid-area:identity; min-width:0; }
+.profile-name { color:var(--heading); font-size:1.45rem; font-weight:750; line-height:1.25; margin-bottom:8px; }
+.profile-identity .professional-title { margin:0; line-height:1.5; }
+.professional-title strong,.professional-title span { display:block; }
+.professional-title span { font-size:.875rem; font-weight:400; color:var(--muted); }
+.professional-title .profile-certification { color:var(--accent-hover); font-weight:600; margin-top:3px; }
+.profile-company { margin-top:8px; font-size:.8rem; color:var(--muted); }
+.hero-message { grid-area:message; min-width:0; }
+.portrait { grid-area:portrait; align-self:center; min-width:0; }
+.no-portrait { grid-template-columns:1fr; grid-template-areas:"identity" "message"; }
+.page,.page-heading,.contact-layout > *,.footer-inner > * { min-width:0; }
+.page p,.page h1,.page h2,.page h3,.chips li,.footer-inner { overflow-wrap:anywhere; }
 .portrait img { width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border:1px solid var(--border); border-radius:var(--radius); }
 .portrait figcaption { font-size:.75rem; margin-top:10px; color:var(--muted); }
 .actions,.social-links,.project-links { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
@@ -128,31 +141,68 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
  .nav-inner { display:block; padding:12px 20px 8px; }
  .brand { display:inline-block; margin-bottom:8px; }
  nav { width:100%; }
- .about-hero { gap:32px; grid-template-columns:minmax(0,1fr) 230px; }
+ .about-hero { column-gap:32px; grid-template-columns:minmax(0,1fr) 230px; }
 }
 @media(max-width:760px) {
- .container { width:calc(100% - 32px); }
- .page { padding:36px 0 48px; }
- .about-hero { grid-template-columns:1fr; gap:24px; }
- .portrait { max-width:220px; }
- .about-story { grid-template-columns:1fr; gap:16px; margin-top:32px; padding-top:28px; }
+ body { font-size:15px; line-height:1.65; }
+ .container { width:calc(100% - 40px); }
+ .nav-inner { padding:10px 20px 6px; }
+ .brand { font-size:.95rem; margin-bottom:5px; }
+ nav { overscroll-behavior-x:contain; }
+ nav a { font-size:.8rem; padding:10px; }
+ .page { padding:28px 0 40px; }
+ .page-heading { margin-bottom:24px; }
+ .about-hero { grid-template-columns:minmax(0,1fr) clamp(96px,27vw,150px); grid-template-areas:"identity portrait" "message message"; column-gap:16px; row-gap:26px; align-items:center; }
+ .profile-name { font-size:clamp(1.15rem,4.5vw,1.5rem); margin-bottom:7px; }
+ .profile-identity .professional-title { font-size:.9rem; line-height:1.45; }
+ .professional-title span { font-size:.75rem; margin-top:4px; }
+ .profile-company { font-size:.75rem; margin-top:6px; }
+ .portrait { width:100%; align-self:start; }
+ .portrait img { border-radius:12px; object-position:center 25%; }
+ .no-portrait { grid-template-columns:1fr; grid-template-areas:"identity" "message"; }
+ .hero-message h1 { font-size:clamp(1.65rem,5.8vw,2.3rem); line-height:1.2; letter-spacing:-.035em; text-wrap:balance; }
+ h1 { font-size:clamp(1.65rem,5.8vw,2.2rem); line-height:1.2; }
+ h2 { font-size:1.2rem; }
+ h3 { font-size:1.05rem; }
+ .lead { font-size:.95rem; margin-top:14px; }
+ .eyebrow { margin-bottom:10px; }
+ .hero-message .actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:20px 0 10px; }
+ .hero-message .btn { padding:11px 8px; font-size:.85rem; }
+ .hero-message .social-links { gap:20px; }
+ .social-links a { font-size:.8rem; }
+ .about-story { grid-template-columns:1fr; gap:14px; margin-top:28px; padding-top:24px; }
+ .grid { gap:16px; }
  .grid.two,.contact-layout { grid-template-columns:1fr; }
- .facts { grid-template-columns:1fr; gap:10px; }
- .facts > div { padding:16px; }
- .contact-form,.company { padding:20px; }
- .footer-inner { flex-direction:column; }
- h1 { font-size:2.1rem; }
- h2 { font-size:1.3rem; }
- .professional-title,.lead { font-size:1rem; }
-}
-@media(max-width:420px) {
- .nav-inner { padding-inline:16px; }
- nav a { padding:10px; font-size:.8rem; }
- .contact-form { grid-template-columns:1fr; padding:16px; }
+ .contact-layout { gap:24px; }
+ .facts { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:24px; }
+ .facts > div { padding:14px; }
+ .facts > div:last-child { grid-column:1/-1; }
+ .facts strong { font-size:.95rem; }
+ .contact-form { grid-template-columns:1fr; gap:16px; padding:18px; }
+ .field input,.field textarea { font-size:16px; }
+ .company { padding:20px; }
  .project-body,.card,.entry { padding:18px; }
  .project-card { padding:0; }
+ .project-cover { aspect-ratio:16/9; padding:8px; }
+ .project-body h2 { margin-bottom:10px; }
+ .chips { margin-top:16px; gap:6px; }
+ .chips li { font-size:.75rem; padding:4px 8px; }
+ .project-links { gap:8px 16px; }
+ .site-footer { padding:24px 0; }
+ .footer-inner { flex-direction:column; gap:16px; }
+ .subheading { margin:28px 0 16px; }
+ .education { margin-top:28px; padding-top:24px; }
+}
+@media(max-width:380px) {
+ .container { width:calc(100% - 32px); }
+ .nav-inner { padding-inline:16px; }
+ .about-hero { column-gap:12px; grid-template-columns:minmax(0,1fr) 96px; }
+ .no-portrait { grid-template-columns:1fr; }
+ .profile-name { font-size:1.15rem; }
+ .professional-title span { font-size:.72rem; }
  .projects-toolbar { gap:8px; }
  .projects-toolbar select { flex:1; min-width:0; }
- .btn { padding:12px 16px; }
+ #projectCount { width:100%; margin-left:0; }
+ .btn { padding:12px 14px; }
 }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
